@@ -197,17 +197,18 @@
   <p>The principal country is therefore the <strong>United States</strong>. These providers operate global infrastructure, and we are not in a position to list every country in which a copy of the information may sit at a given moment &mdash; that is determined by them, not by us. Naming their primary jurisdiction is the most accurate statement we can make, and we would rather give you that than an incomplete list presented as a complete one.</p>
   <p>We have no overseas staff, contractors or offices, and we do not send personal information to anyone overseas other than through the services listed above.</p>
 
-  <h2>8. Demonstration pages hold no data at all</h2>
+  <h2>8. Demonstration pages send us nothing, and save your edits on your own device</h2>
   <p>A demonstration page is a single, static web page that shows how a seating plan might look for a particular venue. It works entirely in your browser:</p>
   <ul>
     <li>there is no login and no account;</li>
     <li>there is nothing to download and nothing to pay for;</li>
-    <li>there is no form or field in which anyone can enter information;</li>
+    <li>you can change the plan &mdash; move guests between seats, add a guest name, add a tag &mdash; but nothing you enter is transmitted anywhere;</li>
     <li>nothing is sent to any server of ours, because we do not operate one for it; and</li>
-    <li>nothing you do on the page is recorded, stored or reported back to us.</li>
+    <li>nothing you do on the page is reported back to us, and we have no way to see it.</li>
   </ul>
+  <p><strong>Your changes are saved, but only on your own device.</strong> So that a plan is still there if you close the tab and come back to it, the page keeps your version in your browser&rsquo;s own local storage, under a name beginning <code>meridianSeating.</code> followed by the name of that demonstration. That copy never leaves your device: it is not sent to us, we cannot read it, and it is not shared with the venue or with anyone else. Clearing your browser&rsquo;s stored site data for this site deletes it.</p>
   <p><strong>Every guest name shown in a demonstration is fictitious.</strong> It is invented sample data, used to show the layout working. It is not a real guest list, and it did not come from the venue.</p>
-  <p class="callout"><strong>Where this stands as at 26 July 2026:</strong> we have not yet published any demonstration page. This section describes how they are built and how they will behave when we do publish one. The software is written so that it cannot call out to another server or store anything in your browser, and that restriction is enforced by automated tests that fail the build if it is broken.</p>
+  <p class="callout"><strong>Where this stands as at 28 July 2026:</strong> demonstration pages are published, at addresses of the form <code>meridianlabssoftware.com/demo/</code> followed by the name of the demonstration. The software is written so that it cannot call out to another server, and that restriction is enforced by automated tests that fail the build if it is broken. It does save your own edits in your own browser, as described above &mdash; that copy stays on your device and reaches neither us nor the venue.</p>
 
   <h2>9. Cookies, analytics and web logs</h2>
   <p>This website sets no cookies of its own, and runs no analytics, advertising or tracking scripts.</p>
