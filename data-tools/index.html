@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google Trends API, Keyword Volume &amp; Jobs | Meridian Labs</title>
-  <meta name="description" content="Pay-per-result APIs: bulk Google Trends (a pytrends alternative), keyword search volume and CPC, and job listings with salary. Code, no-code or AI agents.">
+  <meta name="description" content="Pay-per-result APIs: bulk Google Trends (a pytrends alternative), keyword volume and CPC, backlinks, and jobs with salary. For code, no-code or AI agents.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://meridianlabssoftware.com/data-tools/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Meridian Labs">
   <meta property="og:title" content="Google Trends API, Keyword Volume &amp; Jobs | Meridian Labs">
-  <meta property="og:description" content="Pay-per-result APIs: bulk Google Trends (a pytrends alternative), keyword search volume and CPC, and job listings with salary. Code, no-code or AI agents.">
+  <meta property="og:description" content="Pay-per-result APIs: bulk Google Trends (a pytrends alternative), keyword volume and CPC, backlinks, and jobs with salary. For code, no-code or AI agents.">
   <meta property="og:url" content="https://meridianlabssoftware.com/data-tools/">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
@@ -87,10 +87,33 @@
           "url": "https://meridianlabssoftware.com/"
         }
       }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Backlink Checker: Referring Domains & Spam Score",
+        "url": "https://apify.com/meridianlabs/backlink-checker",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "description": "Backlinks, referring domains, domain rank, dofollow share and spam score for up to 1,000 domains or URLs per run.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.03",
+          "priceCurrency": "USD",
+          "description": "per domain summary; +$0.004 per backlink or referring-domain row"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Meridian Labs",
+          "url": "https://meridianlabssoftware.com/"
+        }
+      }
     }
   ]
 }
-  </script>
+</script>
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
@@ -222,7 +245,7 @@
 
   <p>Each tool is a hosted API: send a list, get one clean row per item back as JSON, CSV or Excel. You pay only for results, failed lookups are free, and Apify&rsquo;s free plan includes $5 of credit a month to try them.</p>
 
-  <p class="page-nav"><a href="#google-trends">Google Trends</a><a href="#keyword-search-volume">Keyword volume</a><a href="#jobs">Jobs + salary</a><a href="#ai-agents">AI agents (MCP)</a></p>
+  <p class="page-nav"><a href="#google-trends">Google Trends</a><a href="#keyword-search-volume">Keyword volume</a><a href="#jobs">Jobs + salary</a><a href="#backlinks">Backlinks</a><a href="#ai-agents">AI agents (MCP)</a></p>
 
   <hr>
   <section class="tool" id="google-trends">
@@ -338,6 +361,36 @@ for row in client.dataset(run.default_dataset_id).iterate_items():
     </ul>
   </section>
   <hr>
+  <section class="tool" id="backlinks">
+    <h3>Backlink Checker: Referring Domains &amp; Spam Score</h3>
+    <p class="lead">A backlink checker and backlinks API for up to 1,000 domains or URLs per run: full backlink lists, not capped samples.</p>
+    <ul>
+        <li>A summary per domain: domain rank, backlinks, referring domains, dofollow share, spam score</li>
+        <li>Every backlink with source URL, anchor text and dofollow flag, or every referring domain</li>
+        <li>Filters for dofollow only, minimum domain rank and spam score</li>
+        <li>Data from DataForSEO&rsquo;s own link index</li>
+    </ul>
+    <p class="price">$0.03 per domain summary, plus $4 per 1,000 backlink or referring-domain rows. Failed lookups are free.</p>
+    <p class="cta"><a href="https://apify.com/meridianlabs/backlink-checker">Open it on the Apify Store &rarr;</a></p>
+    <h4>Call it from Python</h4>
+    <pre><code>from apify_client import ApifyClient
+
+client = ApifyClient(&quot;&lt;YOUR_APIFY_TOKEN&gt;&quot;)
+run = client.actor(&quot;meridianlabs/backlink-checker&quot;).call(run_input={
+    &quot;targets&quot;: [&quot;hubspot.com&quot;], &quot;mode&quot;: &quot;referring_domains&quot;, &quot;maxRowsPerTarget&quot;: 100, &quot;dofollowOnly&quot;: True,
+})
+for row in client.dataset(run.default_dataset_id).iterate_items():
+    if row[&quot;rowType&quot;] == &quot;referring_domain&quot;:
+        print(row[&quot;referringDomain&quot;], row[&quot;domainRank&quot;], row[&quot;backlinks&quot;])</code></pre>
+    <p class="note"><code>pip install apify-client</code> (3.x). Your token is in Apify Console &rarr; Settings &rarr; API &amp; Integrations. It also runs from JavaScript, Make, Zapier, n8n and Google Sheets.</p>
+    <h4>Ready-made examples</h4>
+    <ul class="examples">
+        <li><a href="https://apify.com/meridianlabs/backlink-checker/examples/bulk-backlink-checker">Check backlinks for a whole list of domains</a></li>
+        <li><a href="https://apify.com/meridianlabs/backlink-checker/examples/competitor-referring-domains">Find the sites linking to a competitor</a></li>
+        <li><a href="https://apify.com/meridianlabs/backlink-checker/examples/dofollow-backlinks-api">Get a site&rsquo;s best dofollow backlinks</a></li>
+    </ul>
+  </section>
+  <hr>
   <section id="pytrends">
     <h3>Looking for a pytrends alternative?</h3>
     <p><a href="https://github.com/GeneralMills/pytrends">pytrends</a>, the unofficial Python library most people used for Google Trends, was archived in April 2025 and no longer gets fixes, and bulk jobs from one IP run into <code>429 Too Many Requests</code>. The Google Trends Scraper above does the same job as a hosted API with proxies and retries built in. There&rsquo;s a small pytrends-style Python client for it on GitHub: <a href="https://github.com/leewilliam200/google-trends-api-python">google-trends-api-python</a>.</p>
@@ -351,6 +404,7 @@ for row in client.dataset(run.default_dataset_id).iterate_items():
       <li><strong>Google Trends Scraper &amp; API</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/google-trends-scraper</code><br>MCP Registry: <code>com.meridianlabssoftware/google-trends</code></li>
       <li><strong>Keyword Search Volume &amp; CPC API + Google Trends</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/keyword-search-volume</code><br>MCP Registry: <code>com.meridianlabssoftware/keyword-search-volume</code></li>
       <li><strong>Greenhouse, Lever &amp; Ashby Jobs Scraper + Salary</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/greenhouse-lever-ashby-jobs-scraper</code><br>MCP Registry: <code>com.meridianlabssoftware/ats-jobs</code></li>
+      <li><strong>Backlink Checker: Referring Domains &amp; Spam Score</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/backlink-checker</code><br>MCP Registry: <code>com.meridianlabssoftware/backlink-checker</code></li>
     </ul>
     <p class="note">The registry names are in the official <a href="https://registry.modelcontextprotocol.io/">MCP Registry</a>.</p>
   </section>
