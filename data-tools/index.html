@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Trends API, Keyword Volume &amp; Jobs | Meridian Labs</title>
+  <meta name="description" content="Pay-per-result APIs: bulk Google Trends (a pytrends alternative), keyword search volume and CPC, and job listings with salary. Code, no-code or AI agents.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://meridianlabssoftware.com/data-tools/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Meridian Labs">
+  <meta property="og:title" content="Google Trends API, Keyword Volume &amp; Jobs | Meridian Labs">
+  <meta property="og:description" content="Pay-per-result APIs: bulk Google Trends (a pytrends alternative), keyword search volume and CPC, and job listings with salary. Code, no-code or AI agents.">
+  <meta property="og:url" content="https://meridianlabssoftware.com/data-tools/">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Meridian Labs data tools",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Google Trends Scraper & API",
+        "url": "https://apify.com/meridianlabs/google-trends-scraper",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "description": "Google Trends for hundreds of keywords in one run, with a plain-English summary for every keyword.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.005",
+          "priceCurrency": "USD",
+          "description": "per keyword lookup"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Meridian Labs",
+          "url": "https://meridianlabssoftware.com/"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Keyword Search Volume & CPC API + Google Trends",
+        "url": "https://apify.com/meridianlabs/keyword-search-volume",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "description": "Google Ads search volume, CPC and competition for a whole keyword list, with an optional Google Trends summary per keyword. No Google Ads account needed.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.003",
+          "priceCurrency": "USD",
+          "description": "per keyword (volumes); +$0.003 with the Google Trends summary"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Meridian Labs",
+          "url": "https://meridianlabssoftware.com/"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Greenhouse, Lever & Ashby Jobs Scraper + Salary",
+        "url": "https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "description": "Every open job from the company job boards you choose, from their public board APIs, with salary normalised into one format.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.002",
+          "priceCurrency": "USD",
+          "description": "per job"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Meridian Labs",
+          "url": "https://meridianlabssoftware.com/"
+        }
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      font-size: 17px;
+    }
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #000;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      font-size: 20px;
+      color: #595959;
+      margin: 0 0 40px 0;
+    }
+    p {
+      margin: 0 0 16px 0;
+    }
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #7f7f7f;
+      margin: 56px 0 16px 0;
+    }
+    .product {
+      display: block;
+      padding: 20px 24px;
+      margin: 0 0 12px 0;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .product:hover {
+      border-color: #3030F1;
+      transform: translateY(-1px);
+    }
+    .product strong {
+      display: block;
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .product .desc {
+      color: #595959;
+      font-size: 15px;
+    }
+    .product.static:hover {
+      border-color: #e0e0e0;
+      transform: none;
+    }
+    .product .arrow {
+      color: #3030F1;
+      font-weight: 500;
+      margin-left: 4px;
+    }
+    a {
+      color: #3030F1;
+    }
+    footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid #e0e0e0;
+      color: #7f7f7f;
+      font-size: 14px;
+    }
+    footer p {
+      margin: 0 0 6px 0;
+      color: #7f7f7f;
+    }
+    footer a {
+      color: #7f7f7f;
+      text-decoration: underline;
+    }
+    footer a:hover {
+      color: #3030F1;
+    }
+    footer .legal-links {
+      margin-top: 12px;
+    }
+    @media (max-width: 600px) {
+      body { padding: 40px 20px; }
+      h1 { font-size: 34px; }
+      .tagline { font-size: 18px; }
+    }
+  
+    .page-nav { font-size: 15px; margin: 0 0 40px 0; }
+    .page-nav a { margin-right: 16px; white-space: nowrap; display: inline-block; }
+    .back { font-size: 15px; display: inline-block; margin: 0 0 32px 0; }
+    section.tool { margin: 0 0 8px 0; }
+    h3 { font-size: 24px; font-weight: 700; color: #000; margin: 0 0 8px 0; letter-spacing: -0.01em; }
+    h4 { font-size: 15px; font-weight: 600; color: #000; margin: 24px 0 8px 0; }
+    .lead { color: #333; }
+    ul { padding-left: 22px; margin: 0 0 16px 0; }
+    li { margin: 0 0 6px 0; }
+    .price { padding: 12px 16px; background: #f5f5ff; border-left: 3px solid #3030F1; border-radius: 4px; font-size: 16px; }
+    pre { background: #f6f6f6; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 16px; overflow-x: auto; font-size: 13.5px; line-height: 1.5; margin: 0 0 16px 0; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    p code, li code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; word-break: break-all; }
+    .examples { columns: 2; column-gap: 32px; font-size: 15px; }
+    .examples li { break-inside: avoid; }
+    .cta { font-weight: 600; }
+    hr { border: 0; border-top: 1px solid #e0e0e0; margin: 48px 0; }
+    .note { color: #595959; font-size: 15px; }
+    @media (max-width: 600px) {
+      .examples { columns: 1; }
+      h3 { font-size: 21px; }
+      pre { font-size: 12.5px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="back" href="/">&larr; Meridian Labs</a>
+  <h1>Data tools</h1>
+  <p class="tagline">Pay-per-result data APIs on the Apify Store. Use them from your code, from no-code tools, or from AI agents over MCP.</p>
+
+  <p>Each tool is a hosted API: send a list, get one clean row per item back as JSON, CSV or Excel. You pay only for results, failed lookups are free, and Apify&rsquo;s free plan includes $5 of credit a month to try them.</p>
+
+  <p class="page-nav"><a href="#google-trends">Google Trends</a><a href="#keyword-search-volume">Keyword volume</a><a href="#jobs">Jobs + salary</a><a href="#ai-agents">AI agents (MCP)</a></p>
+
+  <hr>
+  <section class="tool" id="google-trends">
+    <h3>Google Trends Scraper &amp; API</h3>
+    <p class="lead">Google Trends for hundreds of keywords in one run, with a plain-English summary for every keyword.</p>
+    <ul>
+        <li>Interest over time (hourly to monthly, 0&ndash;100)</li>
+        <li>Interest by country, state or US metro area</li>
+        <li>Top and rising related searches, with growth such as +350% or Breakout</li>
+        <li>A summary per keyword: momentum, year-on-year change, peak, seasonality</li>
+    </ul>
+    <p class="price">$5 per 1,000 keyword lookups ($0.005 each). Failed lookups are free.</p>
+    <p class="cta"><a href="https://apify.com/meridianlabs/google-trends-scraper">Open it on the Apify Store &rarr;</a></p>
+    <h4>Call it from Python</h4>
+    <pre><code>from apify_client import ApifyClient
+
+client = ApifyClient(&quot;&lt;YOUR_APIFY_TOKEN&gt;&quot;)
+run = client.actor(&quot;meridianlabs/google-trends-scraper&quot;).call(run_input={
+    &quot;keywords&quot;: [&quot;air fryer&quot;, &quot;standing desk&quot;],
+    &quot;geo&quot;: &quot;US&quot;,
+    &quot;timeRange&quot;: &quot;past_5_years&quot;,
+})
+for row in client.dataset(run.default_dataset_id).iterate_items():
+    print(row[&quot;keyword&quot;], row[&quot;status&quot;], row[&quot;summary&quot;][&quot;text&quot;])</code></pre>
+    <p class="note"><code>pip install apify-client</code> (3.x). Your token is in Apify Console &rarr; Settings &rarr; API &amp; Integrations. It also runs from JavaScript, Make, Zapier, n8n and Google Sheets.</p>
+    <h4>Ready-made examples</h4>
+    <ul class="examples">
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-trends-seasonality-checker">Find when each keyword peaks every year</a></li>
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/bulk-google-trends-checker">Get Google Trends for a whole keyword list</a></li>
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/youtube-search-trends">See which topics are rising on YouTube search</a></li>
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/compare-keywords-google-trends">Compare up to 5 keywords on one Google Trends scale</a></li>
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-trends-by-state">See where a keyword is most searched, state by state</a></li>
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/rising-related-searches-finder">Find the fastest-rising related searches for your topics</a></li>
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-shopping-search-trends">Track Google Shopping search trends for products</a></li>
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-news-search-trends">Measure news search interest in companies and topics</a></li>
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-trends-last-7-days">Spot search spikes in the last 7 days</a></li>
+        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-image-search-trends">Track Google Image search trends for visual topics</a></li>
+    </ul>
+  </section>
+  <hr>
+  <section class="tool" id="keyword-search-volume">
+    <h3>Keyword Search Volume &amp; CPC API + Google Trends</h3>
+    <p class="lead">Google Ads search volume, CPC and competition for a whole keyword list, with an optional Google Trends summary per keyword. No Google Ads account needed.</p>
+    <ul>
+        <li>Monthly search volume and 12-month history</li>
+        <li>CPC, competition and top-of-page bid range</li>
+        <li>Keyword difficulty and search intent</li>
+        <li>Optional Google Trends summary: momentum, year on year, peak, seasonality</li>
+    </ul>
+    <p class="price">$3 per 1,000 keywords for volumes only, or $6 per 1,000 with the Google Trends summary. Failed lookups are free.</p>
+    <p class="cta"><a href="https://apify.com/meridianlabs/keyword-search-volume">Open it on the Apify Store &rarr;</a></p>
+    <h4>Call it from Python</h4>
+    <pre><code>from apify_client import ApifyClient
+
+client = ApifyClient(&quot;&lt;YOUR_APIFY_TOKEN&gt;&quot;)
+run = client.actor(&quot;meridianlabs/keyword-search-volume&quot;).call(run_input={
+    &quot;keywords&quot;: [&quot;air fryer&quot;, &quot;standing desk&quot;], &quot;country&quot;: &quot;US&quot;,
+})
+for row in client.dataset(run.default_dataset_id).iterate_items():
+    print(row[&quot;keyword&quot;], row.get(&quot;searchVolume&quot;), row.get(&quot;cpc&quot;))</code></pre>
+    <p class="note"><code>pip install apify-client</code> (3.x). Your token is in Apify Console &rarr; Settings &rarr; API &amp; Integrations. It also runs from JavaScript, Make, Zapier, n8n and Google Sheets.</p>
+    <h4>Ready-made examples</h4>
+    <ul class="examples">
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/bulk-keyword-search-volume-checker">Check search volume and CPC for a keyword list</a></li>
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/keyword-seasonality-finder">Find seasonal keywords and their peak month</a></li>
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/keyword-planner-data-without-google-ads">Get Keyword Planner data without a Google Ads account</a></li>
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/keyword-search-volume-api">Call a keyword search volume API from your code</a></li>
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/cpc-checker">Check CPC and ad competition before you bid</a></li>
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/keyword-difficulty-checker">Check keyword difficulty for a list of keywords</a></li>
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/search-intent-checker">Label keywords by search intent</a></li>
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/ecommerce-product-keyword-research">Research product keywords for an online store</a></li>
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/keyword-search-volume-australia">Check keyword search volume in Australia</a></li>
+        <li><a href="https://apify.com/meridianlabs/keyword-search-volume/examples/validate-keyword-ideas">Check which keyword ideas anyone actually searches</a></li>
+    </ul>
+  </section>
+  <hr>
+  <section class="tool" id="jobs">
+    <h3>Greenhouse, Lever &amp; Ashby Jobs Scraper + Salary</h3>
+    <p class="lead">Every open job from the company job boards you choose, from their public board APIs, with salary normalised into one format.</p>
+    <ul>
+        <li>Greenhouse, Lever, Ashby, Workable, Recruitee and Teamtailor boards</li>
+        <li>Board URLs, careers pages or plain company domains (the system is detected)</li>
+        <li>Salary as min, max, currency and period, with the source field kept</li>
+        <li>A monitor mode that returns only new or changed jobs each run</li>
+    </ul>
+    <p class="price">$2 per 1,000 jobs ($0.002 each). Company status rows and unsupported systems are free.</p>
+    <p class="cta"><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper">Open it on the Apify Store &rarr;</a></p>
+    <h4>Call it from Python</h4>
+    <pre><code>from apify_client import ApifyClient
+
+client = ApifyClient(&quot;&lt;YOUR_APIFY_TOKEN&gt;&quot;)
+run = client.actor(&quot;meridianlabs/greenhouse-lever-ashby-jobs-scraper&quot;).call(run_input={
+    &quot;companies&quot;: [&quot;https://job-boards.greenhouse.io/tubitv&quot;, &quot;https://jobs.ashbyhq.com/revenuecat&quot;],
+    &quot;onlyWithSalary&quot;: True,
+})
+for row in client.dataset(run.default_dataset_id).iterate_items():
+    if row[&quot;record_type&quot;] == &quot;job&quot;:
+        s = row[&quot;salary&quot;]
+        print(row[&quot;company&quot;], row[&quot;title&quot;], s[&quot;min&quot;], s[&quot;max&quot;], s[&quot;currency&quot;], s[&quot;period&quot;])</code></pre>
+    <p class="note"><code>pip install apify-client</code> (3.x). Your token is in Apify Console &rarr; Settings &rarr; API &amp; Integrations. It also runs from JavaScript, Make, Zapier, n8n and Google Sheets.</p>
+    <h4>Ready-made examples</h4>
+    <ul class="examples">
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/greenhouse-jobs-scraper-with-salary">Scrape Greenhouse jobs with salary</a></li>
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/lever-jobs-scraper-with-salary">Scrape Lever job boards with salary</a></li>
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/ashby-jobs-scraper-with-salary">Scrape Ashby job boards with salary</a></li>
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/workable-jobs-scraper-with-salary">Scrape Workable job boards with salary</a></li>
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/recruitee-jobs-scraper">Scrape Recruitee job boards</a></li>
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/teamtailor-jobs-scraper">Scrape Teamtailor career sites</a></li>
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/careers-page-scraper">Get every open job from a list of company websites</a></li>
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/remote-jobs-with-salary">Find remote jobs that list a salary</a></li>
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/new-job-postings-monitor">Get only the new job postings since your last run</a></li>
+        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/pay-transparency-salary-data">Collect salary ranges from pay-transparency job posts</a></li>
+    </ul>
+  </section>
+  <hr>
+  <section id="pytrends">
+    <h3>Looking for a pytrends alternative?</h3>
+    <p><a href="https://github.com/GeneralMills/pytrends">pytrends</a>, the unofficial Python library most people used for Google Trends, was archived in April 2025 and no longer gets fixes, and bulk jobs from one IP run into <code>429 Too Many Requests</code>. The Google Trends Scraper above does the same job as a hosted API with proxies and retries built in. There&rsquo;s a small pytrends-style Python client for it on GitHub: <a href="https://github.com/leewilliam200/google-trends-api-python">google-trends-api-python</a>.</p>
+  </section>
+  <hr>
+
+  <section id="ai-agents">
+    <h3>Use them from AI agents (MCP)</h3>
+    <p>Every tool is available through Apify&rsquo;s hosted MCP server. Add the URL to any MCP client (Claude, ChatGPT, Cursor and others) and sign in with your Apify account; runs are billed per result, as on the Store.</p>
+    <ul>
+      <li><strong>Google Trends Scraper &amp; API</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/google-trends-scraper</code><br>MCP Registry: <code>com.meridianlabssoftware/google-trends</code></li>
+      <li><strong>Keyword Search Volume &amp; CPC API + Google Trends</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/keyword-search-volume</code><br>MCP Registry: <code>com.meridianlabssoftware/keyword-search-volume</code></li>
+      <li><strong>Greenhouse, Lever &amp; Ashby Jobs Scraper + Salary</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/greenhouse-lever-ashby-jobs-scraper</code><br>MCP Registry: <code>com.meridianlabssoftware/ats-jobs</code></li>
+    </ul>
+    <p class="note">The registry names are in the official <a href="https://registry.modelcontextprotocol.io/">MCP Registry</a>.</p>
+  </section>
+
+  <footer>
+    <p>Data source for Google Trends fields: Google Trends (<a href="https://www.google.com/trends">https://www.google.com/trends</a>). Not affiliated with or endorsed by Google, Greenhouse, Lever, Ashby, Workable, Recruitee or Teamtailor.</p>
+    <p><strong>Meridian Labs</strong> &mdash; ABN <a href="https://abr.business.gov.au/ABN/View?abn=88792692097">88 792 692 097</a></p>
+    <p>Contact: <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a></p>
+    <p class="legal-links"><a href="/">Home</a> &middot; <a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Use</a></p>
+  </footer>
+</body>
+</html>
