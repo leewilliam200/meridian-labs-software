@@ -1,0 +1,6 @@
+# GitHub Pages build settings. Keep internal design records off the public site.
+exclude:
+  - PRODUCT.md
+  - DESIGN.md
+  - DESIGN.json
+  - README.md

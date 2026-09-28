@@ -4,15 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website accessibility audits | Meridian Labs</title>
-  <meta name="description" content="Fixed-price, hands-on accessibility testing of your website's most used pages against WCAG 2.2 AA, with a plain-English fix list. For disability services, charities and councils.">
+  <meta name="description" content="Fixed-price, hands-on accessibility audits of the pages people actually use, tested with a keyboard and screen readers against WCAG 2.2 AA. For disability services, charities and councils.">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1e3fd0">
   <link rel="canonical" href="https://meridianlabssoftware.com/accessibility/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Meridian Labs">
   <meta property="og:title" content="Website accessibility audits | Meridian Labs">
-  <meta property="og:description" content="Fixed-price, hands-on accessibility testing against WCAG 2.2 AA, with a plain-English fix list.">
+  <meta property="og:description" content="Hands-on accessibility testing against WCAG 2.2 AA, with a plain-English fix list. Fixed prices from $1,490 + GST.">
   <meta property="og:url" content="https://meridianlabssoftware.com/accessibility/">
   <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="/accessibility/assets/audit.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,7 +29,8 @@
     "@type": "Organization",
     "name": "Meridian Labs",
     "url": "https://meridianlabssoftware.com/",
-    "email": "admin@meridianlabssoftware.com"
+    "email": "admin@meridianlabssoftware.com",
+    "taxID": "88 792 692 097"
   },
   "offers": [
     {"@type": "Offer", "name": "Key Pages Audit", "price": "1490", "priceCurrency": "AUD", "description": "Home page plus up to 4 pages, or 1 key task. Price excludes GST."},
@@ -32,138 +38,323 @@
   ]
 }
 </script>
-  <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 64px 24px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.6;
-      color: #1a1a1a;
-      font-size: 17px;
-      background: #ffffff;
-    }
-    .skip { position: absolute; left: -9999px; top: 8px; background: #3030F1; color: #fff; padding: 8px 12px; border-radius: 4px; }
-    .skip:focus { left: 8px; }
-    a { color: #3030F1; }
-    a:focus-visible, summary:focus-visible { outline: 3px solid #3030F1; outline-offset: 3px; border-radius: 2px; }
-    .back { font-size: 15px; display: inline-block; margin: 0 0 32px 0; }
-    h1 { font-size: 42px; font-weight: 700; color: #000; margin: 0 0 12px 0; letter-spacing: -0.02em; line-height: 1.15; }
-    .tagline { font-size: 20px; color: #595959; margin: 0 0 32px 0; }
-    p { margin: 0 0 16px 0; }
-    h2 { font-size: 26px; font-weight: 700; color: #000; margin: 56px 0 12px 0; letter-spacing: -0.01em; }
-    h3 { font-size: 19px; font-weight: 600; color: #000; margin: 0 0 6px 0; }
-    ul, ol { padding-left: 22px; margin: 0 0 16px 0; }
-    li { margin: 0 0 6px 0; }
-    .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0 12px 0; }
-    .tier { border: 1px solid #d0d0d0; border-radius: 8px; padding: 20px 22px; }
-    .tier .price { font-size: 30px; font-weight: 700; color: #000; margin: 4px 0 2px 0; }
-    .tier .gst { font-size: 14px; color: #595959; margin: 0 0 12px 0; }
-    .tier ul { font-size: 15.5px; }
-    .tier .for { font-size: 15px; color: #404040; }
-    .note { color: #595959; font-size: 15px; }
-    .cta { display: inline-block; margin: 8px 0 0 0; padding: 12px 18px; background: #3030F1; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; }
-    .cta:hover { background: #2020c0; }
-    .disclaimer { padding: 14px 18px; background: #f5f5ff; border-left: 3px solid #3030F1; border-radius: 4px; }
-    footer { margin-top: 72px; padding-top: 24px; border-top: 1px solid #d0d0d0; color: #595959; font-size: 14px; }
-    footer p { margin: 0 0 6px 0; }
-    footer a { color: #595959; text-decoration: underline; }
-    footer a:hover { color: #3030F1; }
-    @media (max-width: 640px) {
-      body { padding: 40px 20px; }
-      h1 { font-size: 34px; }
-      .tagline { font-size: 18px; }
-      .tiers { grid-template-columns: 1fr; }
-    }
-    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-  </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to main content</a>
-  <nav aria-label="Site"><a class="back" href="/">&larr; Meridian Labs</a></nav>
+<!--
+THESIS: The service page as an Easy Read document: the disability sector's own plain-language format, finished to agency standard. Refuses the blue SaaS "accessibility" page with wheelchair clip-art and stock people.
+OWN-WORLD: Cobalt #1e3fd0 fields, high-visibility yellow #ffd23f pictogram tiles and focus rings with an ink halo, ink #0b1533 on cool paper. Atkinson Hyperlegible Next, heavy. Pictogram-left, one-sentence-right rows; dense ruled tables for the detail.
+STORY: Visitor from our email sees in seconds what we do, what it costs, what they get; procurement finds exact scope and terms; they email us.
+FIRST VIEWPORT: Left: "Can everyone use your website?", lede, yellow "See a sample report" + "Email us", prices. Right: white Easy Read sheet, three pictogram rows, a yellow focus ring stepping down them like Tab.
+FORM: Easy Read document, grounded list position 3, seed d620461d.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-keyboard" viewBox="0 0 48 48"><rect x="4" y="12" width="40" height="24" rx="4"/><path d="M11 19h2M17 19h2M23 19h2M29 19h2M35 19h2M11 25h2M17 25h2M23 25h2M29 25h2M35 25h2M15 30h18"/></symbol>
+    <symbol id="i-listen" viewBox="0 0 48 48"><path d="M8 19v10h7l9 8V11l-9 8z"/><path d="M31 18c2 1.6 3 3.7 3 6s-1 4.4-3 6M36 13c3.6 3 5.5 6.8 5.5 11S39.6 32 36 35"/></symbol>
+    <symbol id="i-fixlist" viewBox="0 0 48 48"><path d="M10 8h28v32H10z"/><path d="M16 17l3 3 6-6M16 29l3 3 6-6M29 18h4M29 30h4"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 48 48"><circle cx="21" cy="21" r="12"/><path d="M30 30l11 11M21 15v12M15 21h12"/></symbol>
+    <symbol id="i-contrast" viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 8v32a16 16 0 0 0 0-32z" style="fill:currentColor"/></symbol>
+    <symbol id="i-form" viewBox="0 0 48 48"><rect x="7" y="9" width="34" height="10" rx="3"/><rect x="7" y="29" width="34" height="10" rx="3"/><path d="M12 14h1M12 34h1"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="30" rx="4"/><path d="M7 19h34M16 6v8M32 6v8M16 27h4M28 27h4M16 33h4"/></symbol>
+    <symbol id="i-price" viewBox="0 0 48 48"><path d="M24 6H40v16L22 40 8 26z"/><circle cx="33" cy="13" r="2.5"/></symbol>
+    <symbol id="i-retest" viewBox="0 0 48 48"><path d="M38 20A14 14 0 0 0 12 15M10 28a14 14 0 0 0 26 5"/><path d="M12 7v8h8M36 41v-8h-8"/></symbol>
+    <symbol id="i-report" viewBox="0 0 48 48"><path d="M12 5h17l9 9v29H12z"/><path d="M29 5v9h9M18 24h13M18 30h13M18 36h8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 48 48"><rect x="5" y="11" width="38" height="26" rx="4"/><path d="M6 13l18 13 18-13"/></symbol>
+    <symbol id="i-widget" viewBox="0 0 48 48"><circle cx="24" cy="24" r="15"/><circle cx="24" cy="17" r="3"/><path d="M16 22h16M24 22v8l-5 7M24 30l5 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-plain" viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="2"/><path d="M13 6h8M13 9h5M3 15h18M3 19h12"/></symbol>
+    <symbol id="i-detail" viewBox="0 0 24 24"><path d="M3 5h18M3 10h18M3 15h18M3 20h18M9 5v15"/></symbol>
+  </defs>
+</svg>
 
-  <main id="main">
-  <h1>Website accessibility audits</h1>
-  <p class="tagline">Hands-on testing of the pages people actually use on your website, with a plain-English fix list your web person or vendor can act on.</p>
+<a class="skip" href="#main">Skip to main content</a>
 
-  <p>For disability service providers, charities, councils and other organisations whose websites need to work for everyone, including people who use a keyboard instead of a mouse, a screen reader, zoom or voice control.</p>
-
-  <p><a class="cta" href="/accessibility/sample-report/">See a sample report</a></p>
-
-  <h2 id="pricing">Two fixed prices</h2>
-  <div class="tiers">
-    <section class="tier" aria-labelledby="t1">
-      <h3 id="t1">Key Pages Audit</h3>
-      <p class="price">$1,490</p>
-      <p class="gst">+ GST ($1,639 total)</p>
-      <p class="for">Charities, NDIS providers and smaller organisations.</p>
-      <ul>
-        <li>Your home page plus up to 4 pages, or 1 key task such as a donation, referral or enquiry form</li>
-        <li>Report within 5 business days</li>
-        <li>One retest of the priority fixes within 60 days</li>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#ffd23f"/><path d="M8 25V10l9 9 9-9v15" fill="none" stroke="#0b1533" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Meridian Labs<small>Accessibility audits</small></span>
+    </a>
+    <nav aria-label="Page sections">
+      <ul class="nav">
+        <li><a href="#how">How we test</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="/accessibility/sample-report/">Sample report</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </section>
-    <section class="tier" aria-labelledby="t2">
-      <h3 id="t2">Template Audit</h3>
-      <p class="price">$4,900</p>
-      <p class="gst">+ GST ($5,390 total)</p>
-      <p class="for">Councils, agencies and larger organisations.</p>
-      <ul>
-        <li>Up to 10 page templates plus 1 key form or task</li>
-        <li>Report within 10 business days, and a 30-minute walkthrough if you want one</li>
-        <li>One retest of the priority fixes within 60 days</li>
-      </ul>
-    </section>
+    </nav>
   </div>
-  <p class="note">No surprise extras. If you want more pages tested, I'll quote it in writing first. Written quotes for purchase orders are no problem.</p>
+</header>
 
-  <h2 id="how">How I test</h2>
-  <p>Every page is checked against WCAG 2.2 Level A and AA, the benchmark the Australian Human Rights Commission points to in its guidance on digital access.</p>
-  <ul>
-    <li><strong>By hand, with a keyboard only.</strong> Can every link, menu and form be reached and used without a mouse? Can you always see where you are?</li>
-    <li><strong>With screen readers.</strong> NVDA on Windows and VoiceOver on Mac and iPhone, on your key tasks.</li>
-    <li><strong>At 200% and 400% zoom, and on a phone-sized screen.</strong> Does anything get cut off or overlap?</li>
-    <li><strong>Colour contrast, headings, labels, error messages, link and button names, images and their text descriptions.</strong></li>
-    <li><strong>An automated scan</strong> (axe-core) at desktop and mobile widths. It catches some issues quickly, but it's only the starting point, which is why everything above is done by hand.</li>
-  </ul>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title">Can <mark>everyone</mark> use your website?</h1>
+        <p class="lede">Hands-on accessibility audits of the pages people actually use, with a plain-English fix list your web team can act on.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/accessibility/sample-report/">See a sample report <svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#contact">Get a quote</a>
+        </div>
+        <ul class="hero-price">
+          <li>Key Pages Audit <strong>$1,490 + GST</strong></li>
+          <li>Template Audit <strong>$4,900 + GST</strong></li>
+          <li>Tested against <strong>WCAG 2.2 AA</strong></li>
+        </ul>
+      </div>
 
-  <h2 id="report">What you get</h2>
-  <ul>
-    <li>A short summary you can share with your CEO, board or manager.</li>
-    <li>Every issue ranked <em>Fix first</em>, <em>Fix soon</em> or <em>Tidy up</em>, with who it affects, where it is, a screenshot, how to see it yourself and how to fix it, including code examples where they help.</li>
-    <li>A list of what's already working well.</li>
-    <li>A checklist of every WCAG 2.2 A and AA criterion for the pages tested.</li>
-  </ul>
-  <p><a href="/accessibility/sample-report/">Read the sample report</a> to see exactly what it looks like.</p>
+      <div class="sheet">
+        <div class="sheet-head">
+          <h2>What we do</h2>
+        </div>
+        <ul class="er">
+          <li>
+            <span class="picto" aria-hidden="true"><svg><use href="#i-keyboard"/></svg></span>
+            <p>We use your website with <b>only a keyboard</b>, the way many people have to.</p>
+          </li>
+          <li>
+            <span class="picto" aria-hidden="true"><svg><use href="#i-listen"/></svg></span>
+            <p>We <b>listen to it with screen readers</b>, the way many blind people use the web.</p>
+          </li>
+          <li>
+            <span class="picto" aria-hidden="true"><svg><use href="#i-fixlist"/></svg></span>
+            <p>We tell you <b>what to fix first</b>, and how, in plain English.</p>
+          </li>
+        </ul>
+        <p class="sheet-foot">Try it: press <kbd>Tab</kbd> on any website. Can you always see where you are?</p>
+      </div>
+    </div>
+  </section>
 
-  <h2 id="steps">How it works</h2>
-  <ol>
-    <li>Email me your website and the pages or tasks that matter most. I'll confirm the scope and send a written quote.</li>
-    <li>You say go ahead, by reply email or purchase order.</li>
-    <li>I test and send the report by the date agreed.</li>
-    <li>Your team or web vendor fixes things. When you're ready, I retest the priority items.</li>
-  </ol>
-  <p>Payment is by tax invoice after the report is delivered: bank transfer, or card if that's easier.</p>
+  <section class="band band-white" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <h2 class="title" id="how-title">Two ways to read this. Same audit.</h2>
+      <p class="intro">The plain version is for everyone. The detailed version is for your web team and whoever signs the purchase order.</p>
 
-  <h2 id="not">What this isn't</h2>
-  <p class="disclaimer">This is testing and remediation guidance, not legal advice or a compliance guarantee. I don't issue certificates or say a website is "compliant" with any law. The report tells you what I found on the pages tested, on the dates tested, and how to fix it.</p>
-  <p>I don't sell or recommend accessibility overlays or widgets. They don't fix the underlying code, and many people who use assistive technology find they get in the way.</p>
+      <div class="registers">
+        <div>
+          <h3 class="register">Plain version</h3>
+          <ul class="er">
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span><p>We make your pages <b>four times bigger</b> to check nothing gets cut off.</p></li>
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-contrast"/></svg></span><p>We check text and buttons are <b>easy to see</b>.</p></li>
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-form"/></svg></span><p>We try your <b>forms</b>: referrals, donations, enquiries.</p></li>
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-report"/></svg></span><p>You get a <b>report</b> with pictures of every problem.</p></li>
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-retest"/></svg></span><p>When you have fixed things, <b>we check again</b>.</p></li>
+          </ul>
+        </div>
 
-  <h2 id="who">Who you're dealing with</h2>
-  <p>Meridian Labs is my own small business. I'm William Lee, a software developer in Sydney. I do the testing and write every report myself; nothing is outsourced.</p>
-  <p>Email <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a> with your website address and I'll usually reply within one business day.</p>
+        <div>
+          <h3 class="register">Detailed version</h3>
+          <div class="detail">
+            <dl>
+              <div class="row"><dt>Benchmark</dt><dd>WCAG 2.2, Level A and AA: the benchmark the Australian Human Rights Commission's guidance on digital access points to.</dd></div>
+              <div class="row"><dt>Manual testing</dt><dd>
+                <ul>
+                  <li>Keyboard only: reach, operate, focus order, visible focus, no traps</li>
+                  <li>NVDA with Firefox on Windows; VoiceOver with Safari on macOS and iOS</li>
+                  <li>Zoom to 200% and 400%, text spacing, 320 px reflow, orientation</li>
+                  <li>Contrast of text, controls and focus indicators, measured</li>
+                  <li>Forms: labels, instructions, errors, status messages</li>
+                  <li>Headings, landmarks, link and button names, images and alternatives</li>
+                </ul>
+              </dd></div>
+              <div class="row"><dt>Automated scan</dt><dd>axe-core at desktop (1280 px) and mobile (390 px) widths, as a starting point. Every finding is confirmed by hand.</dd></div>
+              <div class="row"><dt>Each issue records</dt><dd>Priority, WCAG success criterion, location and element, who it affects, steps to reproduce, fix guidance with code, and a screenshot.</dd></div>
+              <div class="row"><dt>Also included</dt><dd>Summary for leadership, what's working well, a checklist of every A and AA criterion for the pages tested, and one retest of the priority items within 60 days.</dd></div>
+              <div class="row"><dt>Your data</dt><dd>We test only your public website. No forms are submitted and no accounts are created without your written permission. Findings are shared only with you.</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2 id="this-page">This page</h2>
-  <p class="note">This page is built to WCAG 2.2 AA. If anything on it doesn't work for you, please email me and I'll fix it.</p>
-  </main>
+  <section class="band band-cobalt" id="prices" aria-labelledby="prices-title">
+    <div class="wrap">
+      <h2 class="title" id="prices-title">Fixed prices, published.</h2>
+      <p class="intro">No quote chase. If you need more pages, we quote the extra in writing before starting. Written quotes for purchase orders are no problem.</p>
+      <div class="tablebox tiers-desktop" tabindex="0" role="region" aria-labelledby="prices-caption">
+        <table class="tariff">
+          <caption id="prices-caption">Audit prices in Australian dollars</caption>
+          <thead>
+            <tr>
+              <td></td>
+              <th scope="col" class="col-feature">Key Pages Audit<span>Charities, NDIS providers, smaller organisations</span></th>
+              <th scope="col">Template Audit<span>Councils, agencies, larger organisations</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Price</th>
+              <td class="col-feature"><p class="price">$1,490<small>+ GST, $1,639 total</small></p></td>
+              <td><p class="price">$4,900<small>+ GST, $5,390 total</small></p></td>
+            </tr>
+            <tr>
+              <th scope="row">What's tested</th>
+              <td class="col-feature">Your home page plus up to 4 pages, or 1 key task such as a referral, donation or enquiry form</td>
+              <td>Up to 10 page templates plus 1 key form or task</td>
+            </tr>
+            <tr>
+              <th scope="row">Report delivered</th>
+              <td class="col-feature">Within 5 business days</td>
+              <td>Within 10 business days, plus a 30-minute walkthrough if you want one</td>
+            </tr>
+            <tr>
+              <th scope="row">Retest</th>
+              <td class="col-feature">One retest of the priority fixes within 60 days</td>
+              <td>One retest of the priority fixes within 60 days</td>
+            </tr>
+            <tr>
+              <th scope="row">Payment</th>
+              <td class="col-feature">Tax invoice after delivery, 14 days. Bank transfer or card.</td>
+              <td>Purchase order, then tax invoice after delivery, 30 days</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tiers-mobile">
+        <div class="tier-card feature">
+          <h3>Key Pages Audit</h3>
+          <p class="for">Charities, NDIS providers, smaller organisations</p>
+          <p class="price">$1,490</p>
+          <p class="gst">+ GST, $1,639 total</p>
+          <dl>
+            <div><dt>What's tested</dt><dd>Your home page plus up to 4 pages, or 1 key task such as a referral, donation or enquiry form</dd></div>
+            <div><dt>Report delivered</dt><dd>Within 5 business days</dd></div>
+            <div><dt>Retest</dt><dd>One retest of the priority fixes within 60 days</dd></div>
+            <div><dt>Payment</dt><dd>Tax invoice after delivery, 14 days. Bank transfer or card.</dd></div>
+          </dl>
+        </div>
+        <div class="tier-card">
+          <h3>Template Audit</h3>
+          <p class="for">Councils, agencies, larger organisations</p>
+          <p class="price">$4,900</p>
+          <p class="gst">+ GST, $5,390 total</p>
+          <dl>
+            <div><dt>What's tested</dt><dd>Up to 10 page templates plus 1 key form or task</dd></div>
+            <div><dt>Report delivered</dt><dd>Within 10 business days, plus a 30-minute walkthrough if you want one</dd></div>
+            <div><dt>Retest</dt><dd>One retest of the priority fixes within 60 days</dd></div>
+            <div><dt>Payment</dt><dd>Purchase order, then tax invoice after delivery, 30 days</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="fineprint">Meridian Labs is registered for GST (ABN 88 792 692 097). Prices are fixed for the scope shown. <a href="/accessibility/terms/">Audit terms</a>.</p>
+    </div>
+  </section>
 
-  <footer>
-    <p><strong>Meridian Labs</strong> &mdash; ABN <a href="https://abr.business.gov.au/ABN/View?abn=88792692097">88 792 692 097</a></p>
-    <p>Postal address: PO Box 64, AUBURN NSW 1835</p>
-    <p>Contact: <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a></p>
-    <p><a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Use</a></p>
-  </footer>
+  <section class="band band-ink" aria-labelledby="report-title">
+    <div class="wrap excerpt">
+      <div>
+        <h2 class="title" id="report-title">Every problem, with who it affects and how to fix it.</h2>
+        <p class="intro">This is one issue from our sample report. Your web person or vendor can act on it the same day.</p>
+        <a class="btn btn-primary" href="/accessibility/sample-report/">Read the full sample report <svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg></a>
+      </div>
+      <article class="finding" aria-label="Sample issue from a report">
+        <p class="finding-top"><span class="tag p1">Fix first</span><span class="wcag">WCAG 1.3.1, 3.3.2, 4.1.2 (Level A)</span></p>
+        <h3>Referral form fields have no labels</h3>
+        <dl>
+          <div><dt>Who it affects</dt><dd>Screen reader users hear "edit text, blank" for every field, so they can't tell what to type.</dd></div>
+          <div><dt>Check it yourself</dt><dd>Click the words "First name". With a real label, the cursor jumps into the field. Here nothing happens.</dd></div>
+          <div><dt>How to fix it</dt><dd>
+<pre tabindex="0" aria-label="Code example: before and after"><code><del>&lt;input type="text" placeholder="First name"&gt;</del>
+<ins>&lt;label for="first-name"&gt;First name&lt;/label&gt;
+&lt;input id="first-name" autocomplete="given-name"&gt;</ins></code></pre>
+          </dd></div>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  <section class="band band-white" aria-labelledby="steps-title">
+    <div class="wrap">
+      <h2 class="title" id="steps-title">How it works</h2>
+      <p class="intro">Four steps, all by email. No sales calls unless you want one.</p>
+      <ol class="steps-er">
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-mail"/></svg></span><h3>1. Tell us the pages</h3><p>Send your website and the pages or tasks that matter most. We confirm the scope and send a written quote.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-fixlist"/></svg></span><h3>2. Say go ahead</h3><p>Reply to the email or send a purchase order.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-report"/></svg></span><h3>3. Get the report</h3><p>We test and deliver the report by the agreed date, then invoice.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-retest"/></svg></span><h3>4. Fix, then retest</h3><p>Your team or vendor fixes the priority items. We check them again.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="limits-title">
+    <div class="wrap">
+      <h2 class="title" id="limits-title">What we won't tell you.</h2>
+      <p class="intro">Honest limits, so you know exactly what you're buying.</p>
+      <div class="limits">
+        <div class="limit">
+          <span class="picto cross" aria-hidden="true"><svg><use href="#i-report"/></svg></span>
+          <div>
+          <p class="quote">"Your site is compliant."</p>
+          <p>Our audits are testing and remediation guidance, not legal advice or a compliance guarantee. We don't issue certificates. The report says what we found on the pages tested, on the dates tested, and how to fix it.</p>
+          </div>
+        </div>
+        <div class="limit">
+          <span class="picto cross" aria-hidden="true"><svg><use href="#i-widget"/></svg></span>
+          <div>
+          <p class="quote">"Just add this widget."</p>
+          <p>We don't sell or recommend accessibility overlays or widgets. They don't fix the underlying code, and many people who use assistive technology find they get in the way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="close" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div>
+      <h2 id="contact-title">Tell us which pages matter most.</h2>
+      <p>Email your website address and the pages or tasks people use most. We usually reply within one business day with a written quote.</p>
+      <p>Audits are carried out by William Lee for Meridian Labs, an Australian business based in Sydney.</p>
+    </div>
+    <div class="mailbox">
+      <p>Email</p>
+      <p class="addr" id="addr">admin@meridianlabssoftware.com</p>
+      <div class="row">
+        <a class="btn btn-primary" href="mailto:admin@meridianlabssoftware.com?subject=Accessibility%20audit%20quote">
+          <svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48"><use href="#i-mail"/></svg>
+          Write an email
+        </a>
+        <button class="btn" type="button" id="copy">Copy address</button>
+      </div>
+      <p role="status" id="copy-status"></p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <p><strong>Meridian Labs</strong> · ABN <a href="https://abr.business.gov.au/ABN/View?abn=88792692097">88 792 692 097</a></p>
+      <p>PO Box 64, Auburn NSW 1835</p>
+    </div>
+    <div>
+      <p><a href="/">Meridian Labs home</a> · <a href="/accessibility/terms/">Audit terms</a> · <a href="/accessibility/sample-report/">Sample report</a></p>
+      <p>This page is built to WCAG 2.2 AA. If something doesn't work for you, email us and we'll fix it.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy');
+    var status = document.getElementById('copy-status');
+    var addr = 'admin@meridianlabssoftware.com';
+    btn.addEventListener('click', function () {
+      function done(msg) { status.textContent = msg; }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(function () { done('Address copied.'); }, function () { select(); });
+      } else { select(); }
+      function select() {
+        var r = document.createRange(); r.selectNodeContents(document.getElementById('addr'));
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        done('Address selected. Press Ctrl+C or Cmd+C to copy.');
+      }
+    });
+  })();
+</script>
 </body>
 </html>
