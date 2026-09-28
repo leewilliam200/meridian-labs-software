@@ -7,13 +7,20 @@
   <meta name="description" content="Fixed-price, hands-on accessibility audits of the pages people actually use, tested with a keyboard and screen readers against WCAG 2.2 AA. For disability services, charities and councils.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1e3fd0">
+  <link rel="icon" href="/accessibility/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/accessibility/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/accessibility/assets/apple-touch-icon.png">
+  <meta property="og:image" content="https://meridianlabssoftware.com/accessibility/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Meridian Labs accessibility audits: Can everyone use your website? Hand-tested against WCAG 2.2 AA, from $1,490 plus GST.">
   <link rel="canonical" href="https://meridianlabssoftware.com/accessibility/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Meridian Labs">
   <meta property="og:title" content="Website accessibility audits | Meridian Labs">
   <meta property="og:description" content="Hands-on accessibility testing against WCAG 2.2 AA, with a plain-English fix list. Fixed prices from $1,490 + GST.">
   <meta property="og:url" content="https://meridianlabssoftware.com/accessibility/">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:wght@400;700;800&display=swap">
@@ -62,6 +69,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <symbol id="i-report" viewBox="0 0 48 48"><path d="M12 5h17l9 9v29H12z"/><path d="M29 5v9h9M18 24h13M18 30h13M18 36h8"/></symbol>
     <symbol id="i-mail" viewBox="0 0 48 48"><rect x="5" y="11" width="38" height="26" rx="4"/><path d="M6 13l18 13 18-13"/></symbol>
     <symbol id="i-widget" viewBox="0 0 48 48"><circle cx="24" cy="24" r="15"/><circle cx="24" cy="17" r="3"/><path d="M16 22h16M24 22v8l-5 7M24 30l5 7"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 48 48"><path d="M17 26V11a3 3 0 0 1 6 0v12M23 22V8a3 3 0 0 1 6 0v14M29 22V11a3 3 0 0 1 6 0v15M17 24l-3-4a3 3 0 0 0-5 3l6 10c3 5 7 8 13 8h1c6 0 9-5 9-11v-4"/></symbol>
+    <symbol id="i-question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 1-1 1.7v.5M12 17h.01"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></symbol>
     <symbol id="i-plain" viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="2"/><path d="M13 6h8M13 9h5M3 15h18M3 19h12"/></symbol>
     <symbol id="i-detail" viewBox="0 0 24 24"><path d="M3 5h18M3 10h18M3 15h18M3 20h18M9 5v15"/></symbol>
@@ -102,6 +112,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <li>Template Audit <strong>$4,900 + GST</strong></li>
           <li>Tested against <strong>WCAG 2.2 AA</strong></li>
         </ul>
+        <p class="assure"><svg aria-hidden="true" focusable="false"><use href="#i-receipt"/></svg><span><strong>You pay after you get the report.</strong> <!-- DRAFT OPTIONAL GUARANTEE --><span class="guarantee">If we don't find a real issue on your key pages, you don't pay at all.</span><!-- /DRAFT --></span></p>
       </div>
 
       <div class="sheet">
@@ -127,7 +138,19 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </div>
   </section>
 
-  <section class="band band-white" id="how" aria-labelledby="how-title">
+  <section class="band band-white why" aria-labelledby="why-title">
+    <div class="wrap">
+      <h2 class="title" id="why-title">Why teams pick us</h2>
+      <ul class="er why-grid">
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-price"/></svg></span><p><b>Our prices are on this page.</b> Most Australian audit firms don't publish theirs. We checked 11.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-calendar"/></svg></span><p>Your report arrives <b>within 5 business days</b>, not weeks.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-hand"/></svg></span><p>Every issue is <b>checked by hand</b>. No overlays, no automated-only reports.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-report"/></svg></span><p>You pay <b>after</b> you get the report, and <b>one retest</b> is included.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="how" aria-labelledby="how-title">
     <div class="wrap">
       <h2 class="title" id="how-title">Two ways to read this. Same audit.</h2>
       <p class="intro">The plain version is for everyone. The detailed version is for your web team and whoever signs the purchase order.</p>
@@ -148,7 +171,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <h3 class="register">Detailed version</h3>
           <div class="detail">
             <dl>
-              <div class="row"><dt>Benchmark</dt><dd>WCAG 2.2, Level A and AA: the benchmark the Australian Human Rights Commission's guidance on digital access points to.</dd></div>
+              <div class="row"><dt>Benchmark</dt><dd><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>, Level A and AA: the benchmark named in the Australian Human Rights Commission's <a href="https://humanrights.gov.au/resource-hub/resources-for-organisations-businesses/disability-resources-employers/guidelines-equal-access-digital-goods-and-services">guidelines on equal access to digital goods and services</a> (2025).</dd></div>
               <div class="row"><dt>Manual testing</dt><dd>
                 <ul>
                   <li>Keyboard only: reach, operate, focus order, visible focus, no traps</li>
@@ -248,7 +271,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div>
         <h2 class="title" id="report-title">Every problem, with who it affects and how to fix it.</h2>
         <p class="intro">This is one issue from our sample report. Your web person or vendor can act on it the same day.</p>
-        <a class="btn btn-primary" href="/accessibility/sample-report/">Read the full sample report <svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg></a>
+        <div class="actions">
+          <a class="btn btn-primary" href="/accessibility/sample-report/">Read the full sample report <svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="/accessibility/sample-report/meridian-labs-sample-accessibility-report.pdf">Download as PDF <span class="fsize">(PDF, 360 KB)</span></a>
+        </div>
       </div>
       <article class="finding" aria-label="Sample issue from a report">
         <p class="finding-top"><span class="tag p1">Fix first</span><span class="wcag">WCAG 1.3.1, 3.3.2, 4.1.2 (Level A)</span></p>
@@ -266,7 +292,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </div>
   </section>
 
-  <section class="band band-white" aria-labelledby="steps-title">
+  <section class="band" aria-labelledby="steps-title">
     <div class="wrap">
       <h2 class="title" id="steps-title">How it works</h2>
       <p class="intro">Four steps, all by email. No sales calls unless you want one.</p>
@@ -276,6 +302,42 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <li><span class="picto" aria-hidden="true"><svg><use href="#i-report"/></svg></span><h3>3. Get the report</h3><p>We test and deliver the report by the agreed date, then invoice.</p></li>
         <li><span class="picto" aria-hidden="true"><svg><use href="#i-retest"/></svg></span><h3>4. Fix, then retest</h3><p>Your team or vendor fixes the priority items. We check them again.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="band band-white" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-wrap">
+      <h2 class="title" id="faq-title">Questions people ask first</h2>
+      <div class="faq">
+        <details>
+          <summary>Is website accessibility a legal requirement in Australia?</summary>
+          <div><p>The Disability Discrimination Act 1992 makes it unlawful to discriminate against people with disability when providing goods, services and facilities, and the Australian Human Rights Commission treats websites and apps as part of that. Its <a href="https://humanrights.gov.au/resource-hub/resources-for-organisations-businesses/disability-resources-employers/guidelines-equal-access-digital-goods-and-services">2025 guidelines</a> say organisations should meet WCAG 2.2 Level AA. The guidelines themselves aren't law, and the Act is enforced through complaints to the Commission. Many public bodies also have their own accessibility policies or disability inclusion action plans.</p><p>We're not lawyers and this isn't legal advice. What we can tell you is what's stopping people using your site, and how to fix it.</p></div>
+        </details>
+        <details>
+          <summary>Will you fix the problems for us?</summary>
+          <div><p>We give your web team or vendor exact fix guidance, with code examples, so they can fix things quickly. We don't edit your website ourselves. If you'd like hands-on help after the report, we can quote for it separately.</p></div>
+        </details>
+        <details>
+          <summary>Our website runs on WordPress, Wix, Squarespace or Shopify. Does that matter?</summary>
+          <div><p>No. We test what your visitors actually get. Many problems come from the theme or template, so we note which fixes belong to your platform or vendor. One template fix often fixes every page that uses it.</p></div>
+        </details>
+        <details>
+          <summary>Do you check PDFs and other documents?</summary>
+          <div><p>Not in the standard audits. If your key tasks rely on PDFs, such as a referral form people download, tell us and we'll quote to include them.</p></div>
+        </details>
+        <details>
+          <summary>Why not just install an accessibility widget?</summary>
+          <div><p>Overlay widgets don't change the code underneath, so the barriers stay. Many people who use screen readers and other assistive technology find they get in the way. The lasting fix is in the website itself.</p></div>
+        </details>
+        <details>
+          <summary>Can we pay by purchase order? Do we need you on a supplier panel?</summary>
+          <div><p>Yes, we work with purchase orders. We send a written quote with our ABN and details for your supplier form. Our prices sit below the thresholds where most councils and agencies need a tender or panel, but check your own procurement policy.</p></div>
+        </details>
+        <details>
+          <summary>What do you need from us?</summary>
+          <div><p>Just your website address and the pages or tasks that matter most. We don't need logins or access to your systems. If a task sits behind a log-in, we'll talk about it first.</p></div>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -321,6 +383,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <button class="btn" type="button" id="copy">Copy address</button>
       </div>
       <p role="status" id="copy-status"></p>
+      <div class="free">
+        <p class="free-title">Not ready to buy?</p>
+        <p>Email your website address and we'll send your <strong>top 3 issues, free</strong>, with how to fix them.</p>
+        <a href="mailto:admin@meridianlabssoftware.com?subject=Top%203%20accessibility%20issues%20(free)">Ask for your free top 3</a>
+      </div>
     </div>
   </div>
 </section>
