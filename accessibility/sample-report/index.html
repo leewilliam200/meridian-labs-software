@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample accessibility audit report | Meridian Labs</title>
+  <meta name="description" content="A sample Key Pages Audit report for a fictional disability service provider, showing the format, priorities and fix guidance you receive.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://meridianlabssoftware.com/accessibility/sample-report/">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      font-size: 17px;
+      background: #ffffff;
+    }
+    .skip { position: absolute; left: -9999px; top: 8px; background: #3030F1; color: #fff; padding: 8px 12px; border-radius: 4px; }
+    .skip:focus { left: 8px; }
+    a { color: #3030F1; }
+    a:focus-visible { outline: 3px solid #3030F1; outline-offset: 3px; border-radius: 2px; }
+    .back { font-size: 15px; display: inline-block; margin: 0 0 24px 0; }
+    .banner { padding: 12px 16px; background: #fff6e0; border: 1px solid #e0c070; border-radius: 6px; font-size: 15px; margin: 0 0 32px 0; }
+    h1 { font-size: 36px; font-weight: 700; color: #000; margin: 0 0 16px 0; letter-spacing: -0.02em; line-height: 1.2; }
+    h2 { font-size: 24px; font-weight: 700; color: #000; margin: 48px 0 12px 0; padding-top: 16px; border-top: 1px solid #d0d0d0; }
+    h3 { font-size: 19px; font-weight: 600; color: #000; margin: 32px 0 8px 0; }
+    p { margin: 0 0 14px 0; }
+    ul, ol { padding-left: 22px; margin: 0 0 14px 0; }
+    li { margin: 0 0 6px 0; }
+    dl.meta { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; font-size: 15.5px; margin: 0 0 20px 0; }
+    dl.meta dt { font-weight: 600; }
+    dl.meta dd { margin: 0; }
+    .disclaimer { padding: 14px 18px; background: #f5f5ff; border-left: 3px solid #3030F1; border-radius: 4px; }
+    .tablebox { overflow-x: auto; margin: 0 0 16px 0; }
+    .tablebox:focus-visible { outline: 3px solid #3030F1; outline-offset: 2px; }
+    table { border-collapse: collapse; width: 100%; font-size: 15px; }
+    caption { text-align: left; font-weight: 600; padding: 0 0 6px 0; }
+    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid #d0d0d0; }
+    th { background: #f4f4f4; }
+    .issue { border: 1px solid #d0d0d0; border-radius: 8px; padding: 4px 20px 12px; margin: 0 0 20px 0; }
+    .issue h3 { margin-top: 16px; }
+    .tag { display: inline-block; font-size: 13px; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-right: 6px; }
+    .p1 { background: #fde2e1; color: #8a1c14; }
+    .p2 { background: #fff0d0; color: #6b4a00; }
+    .p3 { background: #e6eefc; color: #1d3f86; }
+    pre:focus-visible { outline: 3px solid #3030F1; outline-offset: 2px; }
+    pre { background: #f6f6f6; border: 1px solid #d0d0d0; border-radius: 6px; padding: 12px 14px; overflow-x: auto; font-size: 13.5px; line-height: 1.5; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    p code, li code, td code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+    .shot { font-size: 14px; color: #595959; font-style: italic; }
+    footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid #d0d0d0; color: #595959; font-size: 14px; }
+    footer p { margin: 0 0 6px 0; }
+    footer a { color: #595959; }
+    @media (max-width: 640px) { body { padding: 40px 18px; } h1 { font-size: 29px; } dl.meta { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <nav aria-label="Site"><a class="back" href="/accessibility/">&larr; Website accessibility audits</a></nav>
+
+  <main id="main">
+  <p class="banner"><strong>Sample report.</strong> Riverbend Community Supports is a made-up organisation and its website doesn't exist. The issues below are the kinds we most often find on disability service and charity websites. A real report also includes a screenshot for every issue.</p>
+
+  <h1>Website accessibility audit: Riverbend Community Supports</h1>
+  <dl class="meta">
+    <dt>Audit</dt><dd>Key Pages Audit</dd>
+    <dt>Site</dt><dd>riverbendsupports.example</dd>
+    <dt>Benchmark</dt><dd>WCAG 2.2, Level A and AA</dd>
+    <dt>Tested</dt><dd>6 to 8 October 2026</dd>
+    <dt>Prepared by</dt><dd>William Lee, Meridian Labs (ABN 88 792 692 097)</dd>
+  </dl>
+  <p class="disclaimer"><strong>Testing and remediation guidance, not legal advice or a compliance guarantee.</strong> This report records what we found on the pages and tasks listed, on the dates listed. It doesn't say the site meets any law or standard, and it doesn't cover pages we didn't test.</p>
+
+  <h2 id="summary">1. Summary</h2>
+  <p>We tested the home page, the NDIS services page, the "Make a referral" form, the donation page and the contact page, on a desktop screen and a phone-sized screen.</p>
+  <p>We found <strong>9 issues</strong> across <strong>8 WCAG 2.2 criteria</strong>.</p>
+  <div class="tablebox" tabindex="0" role="region" aria-label="Issues by priority (scrolls sideways)">
+  <table>
+    <caption>Issues by priority</caption>
+    <thead><tr><th scope="col">Priority</th><th scope="col">Count</th><th scope="col">What it means</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag p1">Fix first</span></td><td>3</td><td>Stops some people completing a task.</td></tr>
+      <tr><td><span class="tag p2">Fix soon</span></td><td>4</td><td>Makes a task noticeably harder.</td></tr>
+      <tr><td><span class="tag p3">Tidy up</span></td><td>2</td><td>Real, but lower impact.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>The three things to fix first:</strong></p>
+  <ol>
+    <li>The referral form's fields have no labels, so screen reader users hear "edit text" with no idea what to type.</li>
+    <li>The main menu can't be opened with a keyboard, so keyboard users can't reach most of the site.</li>
+    <li>Form errors are shown only in red text, and aren't announced, so some people can't tell why the form won't send.</li>
+  </ol>
+
+  <h2 id="scope">2. Scope and method</h2>
+  <div class="tablebox" tabindex="0" role="region" aria-label="Pages and tasks tested (scrolls sideways)">
+  <table>
+    <caption>Pages and tasks tested</caption>
+    <thead><tr><th scope="col">#</th><th scope="col">Page or task</th><th scope="col">Why it's in scope</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Home page</td><td>Most visited; carries the site header, menu and footer.</td></tr>
+      <tr><td>2</td><td>NDIS services</td><td>Where participants and families compare supports.</td></tr>
+      <tr><td>3</td><td>Make a referral (form, up to the submit step)</td><td>The key task for new participants.</td></tr>
+      <tr><td>4</td><td>Donate</td><td>Main fundraising task (the payment step runs on a third-party platform and wasn't tested).</td></tr>
+      <tr><td>5</td><td>Contact us</td><td>General enquiries.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>How we tested:</strong> keyboard only (no mouse); NVDA with Firefox on Windows and VoiceOver with Safari on macOS and iOS; zoom to 200% and 400%; colour contrast measurement; an automated scan with axe-core at 1280 px and 390 px wide. No forms were submitted.</p>
+
+  <h2 id="issues">3. Issues</h2>
+
+  <section class="issue" aria-labelledby="i1">
+    <h3 id="i1">1. Referral form fields have no labels</h3>
+    <p><span class="tag p1">Fix first</span> WCAG 1.3.1 Info and Relationships (A), 3.3.2 Labels or Instructions (A), 4.1.2 Name, Role, Value (A)</p>
+    <p><strong>Where:</strong> Make a referral, all 7 text fields.</p>
+    <p><strong>Who it affects:</strong> screen reader users hear "edit text, blank" for every field. People using voice control can't say the field's name to move to it. The grey placeholder text also disappears as soon as someone starts typing, which is hard for people with memory or attention difficulties.</p>
+    <p><strong>How to check it yourself:</strong> click on the words "First name" above the first field. With a proper label, the cursor jumps into the field. Here nothing happens.</p>
+    <p><strong>How to fix it:</strong> give each field a visible <code>&lt;label&gt;</code> linked by <code>for</code> and <code>id</code>, and keep the placeholder only for examples.</p>
+<pre tabindex="0" aria-label="Code example"><code>&lt;!-- before --&gt;
+&lt;input type="text" placeholder="First name"&gt;
+
+&lt;!-- after --&gt;
+&lt;label for="first-name"&gt;First name&lt;/label&gt;
+&lt;input type="text" id="first-name" name="first-name" autocomplete="given-name"&gt;</code></pre>
+    <p class="shot">A real report shows a screenshot here, with the fields outlined.</p>
+  </section>
+
+  <section class="issue" aria-labelledby="i2">
+    <h3 id="i2">2. The main menu can't be opened with a keyboard</h3>
+    <p><span class="tag p1">Fix first</span> WCAG 2.1.1 Keyboard (A), 4.1.2 Name, Role, Value (A)</p>
+    <p><strong>Where:</strong> site header, every page (counted once).</p>
+    <p><strong>Who it affects:</strong> people who can't use a mouse, including many people with motor disability, and screen reader users. The "Services" and "About" sub-menus open only on mouse hover, so keyboard users can't reach 14 of the site's pages from the menu.</p>
+    <p><strong>How to check it yourself:</strong> press Tab from the top of the page. Focus lands on "Services" but pressing Enter or Space does nothing.</p>
+    <p><strong>How to fix it:</strong> make each top-level item a real <code>&lt;button&gt;</code> that toggles its sub-menu and reports whether it's open.</p>
+<pre tabindex="0" aria-label="Code example"><code>&lt;button aria-expanded="false" aria-controls="menu-services"&gt;Services&lt;/button&gt;
+&lt;ul id="menu-services" hidden&gt; … &lt;/ul&gt;</code></pre>
+    <p>If your theme comes from a vendor, send them this issue: fixing the header template fixes every page.</p>
+  </section>
+
+  <section class="issue" aria-labelledby="i3">
+    <h3 id="i3">3. Form errors are only shown in red and aren't announced</h3>
+    <p><span class="tag p1">Fix first</span> WCAG 1.4.1 Use of Color (A), 3.3.1 Error Identification (A), 4.1.3 Status Messages (AA)</p>
+    <p><strong>Where:</strong> Make a referral, and Contact us.</p>
+    <p><strong>Who it affects:</strong> people with colour blindness can't see which field is wrong; screen reader users get no message at all and the form just doesn't send.</p>
+    <p><strong>How to fix it:</strong> write the error in words next to the field ("Enter a phone number, for example 0412 345 678"), link it with <code>aria-describedby</code>, and move focus to a summary of errors at the top of the form when it's submitted.</p>
+  </section>
+
+  <section class="issue" aria-labelledby="i4">
+    <h3 id="i4">4. The "Donate now" button text is hard to read</h3>
+    <p><span class="tag p2">Fix soon</span> WCAG 1.4.3 Contrast (Minimum) (AA)</p>
+    <p><strong>Where:</strong> header button, every page, and the Donate page.</p>
+    <p><strong>Who it affects:</strong> people with low vision, and anyone reading on a phone outdoors.</p>
+    <p><strong>What we measured:</strong> white text on light orange (<code>#F5A25D</code>): contrast ratio 2.1:1. The minimum for text this size is 4.5:1.</p>
+    <p><strong>How to fix it:</strong> darken the button to <code>#B45309</code> (5.0:1 with white text) or use dark text on the current orange.</p>
+  </section>
+
+  <section class="issue" aria-labelledby="i5">
+    <h3 id="i5">5. You can't see where you are when using a keyboard</h3>
+    <p><span class="tag p2">Fix soon</span> WCAG 2.4.7 Focus Visible (AA)</p>
+    <p><strong>Where:</strong> links and buttons on every page. The theme removes the browser's focus outline (<code>outline: none</code>).</p>
+    <p><strong>How to fix it:</strong> remove that rule and add a clear focus style:</p>
+<pre tabindex="0" aria-label="Code example"><code>a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 2px;
+}</code></pre>
+  </section>
+
+  <section class="issue" aria-labelledby="i6">
+    <h3 id="i6">6. Social media icons have no names</h3>
+    <p><span class="tag p2">Fix soon</span> WCAG 2.4.4 Link Purpose (A), 4.1.2 Name, Role, Value (A)</p>
+    <p><strong>Where:</strong> footer, every page. Screen readers announce "link" four times with nothing else.</p>
+    <p><strong>How to fix it:</strong> add a text name to each link, for example <code>aria-label="Riverbend on Facebook"</code>, and hide the icon itself with <code>aria-hidden="true"</code>.</p>
+  </section>
+
+  <section class="issue" aria-labelledby="i7">
+    <h3 id="i7">7. The services page cuts off text at 400% zoom</h3>
+    <p><span class="tag p2">Fix soon</span> WCAG 1.4.10 Reflow (AA)</p>
+    <p><strong>Where:</strong> NDIS services, the "Our supports" cards. At 400% zoom (or on a narrow phone) the card text is cut off and can't be scrolled to.</p>
+    <p><strong>How to fix it:</strong> remove the fixed <code>height</code> on <code>.support-card</code> so the cards grow with their text.</p>
+  </section>
+
+  <section class="issue" aria-labelledby="i8">
+    <h3 id="i8">8. Decorative images are read out</h3>
+    <p><span class="tag p3">Tidy up</span> WCAG 1.1.1 Non-text Content (A)</p>
+    <p><strong>Where:</strong> home page. Screen readers read file names such as "hero-banner-final-v2 dot jpg".</p>
+    <p><strong>How to fix it:</strong> give purely decorative images an empty <code>alt=""</code>; give meaningful photos a short description.</p>
+  </section>
+
+  <section class="issue" aria-labelledby="i9">
+    <h3 id="i9">9. Heading levels skip</h3>
+    <p><span class="tag p3">Tidy up</span> WCAG 1.3.1 Info and Relationships (A)</p>
+    <p><strong>Where:</strong> NDIS services jumps from a level 1 heading to level 4. Screen reader users who move by headings can miss sections.</p>
+    <p><strong>How to fix it:</strong> use heading levels in order (h1, then h2, then h3), and style them with CSS instead of picking a level for its size.</p>
+  </section>
+
+  <h2 id="good">4. What's working well</h2>
+  <ul>
+    <li>Every page has a unique, descriptive title.</li>
+    <li>Body text contrast is good throughout.</li>
+    <li>The contact page lists phone, email, a postal address and the National Relay Service, so people can choose how to get in touch.</li>
+    <li>Videos on the home page have accurate captions.</li>
+  </ul>
+
+  <h2 id="next">5. Suggested next steps</h2>
+  <ol>
+    <li>Fix issues 1 to 3 first, starting with the referral form.</li>
+    <li>Send issues 2, 4, 5 and 6 to your website vendor: they're in the shared header and footer, so one fix covers every page.</li>
+    <li>Ask for your retest (included) once the "Fix first" items are done.</li>
+    <li>Publish an accessibility statement that says what you've tested, what you're fixing and how people can report a problem.</li>
+  </ol>
+  <p>We don't recommend accessibility overlay or widget products. They don't fix the underlying code, and many people who rely on assistive technology find they get in the way.</p>
+
+  <h2 id="appendix">Appendix: criteria checklist (extract)</h2>
+  <p>A real report lists every WCAG 2.2 A and AA criterion. A few rows as an example:</p>
+  <div class="tablebox" tabindex="0" role="region" aria-label="WCAG 2.2 results (scrolls sideways)">
+  <table>
+    <caption>WCAG 2.2 results (extract)</caption>
+    <thead><tr><th scope="col">Criterion</th><th scope="col">Level</th><th scope="col">Result</th></tr></thead>
+    <tbody>
+      <tr><td>1.1.1 Non-text Content</td><td>A</td><td>Issue found (8)</td></tr>
+      <tr><td>1.4.3 Contrast (Minimum)</td><td>AA</td><td>Issue found (4)</td></tr>
+      <tr><td>2.1.1 Keyboard</td><td>A</td><td>Issue found (2)</td></tr>
+      <tr><td>2.4.2 Page Titled</td><td>A</td><td>Pass</td></tr>
+      <tr><td>2.5.8 Target Size (Minimum)</td><td>AA</td><td>Pass</td></tr>
+      <tr><td>3.3.8 Accessible Authentication (Minimum)</td><td>AA</td><td>Not applicable (no log-in on pages tested)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p><a href="/accessibility/">Back to audit prices and details</a></p>
+  </main>
+
+  <footer>
+    <p><strong>Meridian Labs</strong> &mdash; ABN <a href="https://abr.business.gov.au/ABN/View?abn=88792692097">88 792 692 097</a></p>
+    <p>Postal address: PO Box 64, AUBURN NSW 1835</p>
+    <p>Contact: <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a></p>
+  </footer>
+</body>
+</html>
