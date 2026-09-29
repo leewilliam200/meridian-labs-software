@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopify accessibility audit | Meridian Labs</title>
-  <meta name="description" content="A fixed-price accessibility audit of your Shopify store's home page, a product page, cart and checkout entry. Tested by hand against WCAG 2.2 AA. US$395, report in 5 business days.">
+  <meta name="description" content="A fixed-price accessibility audit of your Shopify store's whole shopping path: home, a collection page, a product page, cart and checkout entry. Tested by hand against WCAG 2.2 AA. US$395, report in 5 business days.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1e3fd0">
   <link rel="icon" href="../accessibility/assets/favicon.svg" type="image/svg+xml">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Meridian Labs">
   <meta property="og:title" content="Shopify accessibility audit | Meridian Labs">
-  <meta property="og:description" content="Your home page, a product page, cart and checkout entry, tested by hand against WCAG 2.2 AA. Fixed price US$395. You pay after you get the report.">
+  <meta property="og:description" content="Your whole shopping path, from home page to checkout, tested by hand against WCAG 2.2 AA. Fixed price US$395. You pay after you get the report.">
   <meta property="og:url" content="https://meridianlabssoftware.com/shopify-accessibility/">
   <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
     "email": "admin@meridianlabssoftware.com"
   },
   "offers": [
-    {"@type": "Offer", "name": "Shopify store audit (launch price)", "price": "395", "priceCurrency": "USD", "description": "Home page, one product page, cart and checkout entry, desktop and mobile, WCAG 2.2 A and AA. Launch price for our first ten stores; list price US$495."}
+    {"@type": "Offer", "name": "Shopify store audit (launch price)", "price": "395", "priceCurrency": "USD", "description": "The shopping path: home page, one collection page, one product page, cart and checkout entry, plus the header, menu, footer and pop-ups on every page; desktop and mobile; WCAG 2.2 A and AA. Launch price for our first ten stores; list price US$495."}
   ]
 }
 </script>
@@ -147,7 +147,7 @@
         <div>
           <h3 class="register">Plain version</h3>
           <ul class="er">
-            <li><span class="picto" aria-hidden="true"><svg><use href="#i-cart"/></svg></span><p>We test <b>four pages</b>: home, a product, your cart and the start of checkout.</p></li>
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-cart"/></svg></span><p>We test <b>your whole shopping path</b>: home, a collection, a product, your cart and the start of checkout, plus the menu, header, footer and pop-ups on every page.</p></li>
             <li><span class="picto" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span><p>We zoom in and use a phone-sized screen to check <b>nothing gets cut off</b>.</p></li>
             <li><span class="picto" aria-hidden="true"><svg><use href="#i-contrast"/></svg></span><p>We check prices, text and buttons are <b>easy to see</b>.</p></li>
             <li><span class="picto" aria-hidden="true"><svg><use href="#i-report"/></svg></span><p>You get a <b>report</b> with a picture of every problem and how to fix it in Shopify.</p></li>
@@ -160,7 +160,7 @@
           <div class="detail">
             <dl>
               <div class="row"><dt>Benchmark</dt><dd><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>, Level A and AA.</dd></div>
-              <div class="row"><dt>Pages</dt><dd>Home page, one product page, cart, and checkout entry (up to the payment step). Desktop and mobile.</dd></div>
+              <div class="row"><dt>Pages</dt><dd>Home page, one collection page, one product page, cart, and checkout entry (up to the payment step), plus the header, menu, footer and pop-ups that appear on every page. Desktop and mobile.</dd></div>
               <div class="row"><dt>Manual testing</dt><dd>
                 <ul>
                   <li>Keyboard only: reach and use every control, focus order, visible focus, no traps in menus, drawers or pop-ups</li>
@@ -201,7 +201,7 @@
             </tr>
             <tr>
               <th scope="row">What's tested</th>
-              <td class="col-feature">Home page, one product page, cart and checkout entry, on desktop and mobile</td>
+              <td class="col-feature">The shopping path: home, one collection page, one product page, cart and checkout entry, plus the header, menu, footer and pop-ups on every page, on desktop and mobile</td>
             </tr>
             <tr>
               <th scope="row">Report delivered</th>
@@ -225,14 +225,14 @@
           <p class="price">US$395</p>
           <p class="gst">Launch price for our first ten stores. List price US$495.</p>
           <dl>
-            <div><dt>What's tested</dt><dd>Home page, one product page, cart and checkout entry, on desktop and mobile</dd></div>
+            <div><dt>What's tested</dt><dd>The shopping path: home, one collection page, one product page, cart and checkout entry, plus the header, menu, footer and pop-ups on every page, on desktop and mobile</dd></div>
             <div><dt>Report delivered</dt><dd>Within 5 business days</dd></div>
             <div><dt>Re-check</dt><dd>One free re-check of the same pages within 30 days of the report</dd></div>
             <div><dt>Payment</dt><dd>Invoice sent with the report. Pay by card. If we don't find a real issue on these pages, you don't pay at all.</dd></div>
           </dl>
         </div>
       </div>
-      <p class="fineprint">All prices in US dollars. The price is fixed for the four pages shown; if you'd like more pages tested, we quote the extra in writing before we start. Our audit terms come with the invoice.</p>
+      <p class="fineprint">All prices in US dollars. The price is fixed for the shopping path shown. Bigger store? Extra page templates (for example search, your account pages or a custom landing page) are US$95 each, and we can quote your whole site in writing before we start. Our audit terms come with the invoice.</p>
     </div>
   </section>
 
@@ -280,7 +280,7 @@
       <h2 class="title" id="steps-title">How it works</h2>
       <p class="intro">Four steps, all by email. No calls needed unless you want one.</p>
       <ol class="steps-er">
-        <li><span class="picto" aria-hidden="true"><svg><use href="#i-mail"/></svg></span><h3>1. Send your store address</h3><p>Email us your store and, if you like, the product page you want tested. We confirm the four pages with you.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-mail"/></svg></span><h3>1. Send your store address</h3><p>Email us your store and, if you like, the product page you want tested. We confirm the pages with you.</p></li>
         <li><span class="picto" aria-hidden="true"><svg><use href="#i-keyboard"/></svg></span><h3>2. We test</h3><p>Keyboard, screen readers, zoom, contrast and a scan, on desktop and mobile. No admin access needed.</p></li>
         <li><span class="picto" aria-hidden="true"><svg><use href="#i-report"/></svg></span><h3>3. Get the report</h3><p>It arrives within 5 business days, with the invoice. Pay by card once you've read it.</p></li>
         <li><span class="picto" aria-hidden="true"><svg><use href="#i-retest"/></svg></span><h3>4. Fix, then re-check</h3><p>You or your developer make the fixes. We re-check the same pages once, free, within 30 days.</p></li>
@@ -293,8 +293,8 @@
       <h2 class="title" id="faq-title">Questions store owners ask</h2>
       <div class="faq">
         <details>
-          <summary>Why these four pages?</summary>
-          <div><p>They're where a customer finds, chooses and pays for a product. A problem there stops a sale. Most Shopify stores reuse the same templates, so fixing these pages usually fixes the same problem everywhere. Where that's not the case, the report says so.</p></div>
+          <summary>Why the shopping path?</summary>
+          <div><p>It's where a customer browses, chooses and pays for a product. A problem there stops a sale. Most Shopify stores reuse the same templates, so fixing these pages usually fixes the same problem everywhere. Where that's not the case, the report says so.</p></div>
         </details>
         <details>
           <summary>Do you need access to my Shopify admin?</summary>
@@ -344,7 +344,7 @@
           </div>
         </div>
       </div>
-      <p class="after-limits">It also isn't the whole site. The audit covers four pages. Fixing them usually fixes the same templates across the store, and we'll tell you where it doesn't.</p>
+      <p class="after-limits">It also isn't the whole site. The audit covers your shopping path and the parts that appear on every page. Fixing them usually fixes the same templates across the store, and we'll tell you where it doesn't. Extra templates are US$95 each, or we can quote the whole site.</p>
     </div>
   </section>
 </main>
