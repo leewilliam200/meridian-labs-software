@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopify accessibility audit | Meridian Labs</title>
+  <meta name="description" content="A fixed-price accessibility audit of your Shopify store's home page, a product page, cart and checkout entry. Tested by hand against WCAG 2.2 AA. US$395, report in 5 business days.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1e3fd0">
+  <link rel="icon" href="../accessibility/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../accessibility/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../accessibility/assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://meridianlabssoftware.com/shopify-accessibility/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Meridian Labs">
+  <meta property="og:title" content="Shopify accessibility audit | Meridian Labs">
+  <meta property="og:description" content="Your home page, a product page, cart and checkout entry, tested by hand against WCAG 2.2 AA. Fixed price US$395. You pay after you get the report.">
+  <meta property="og:url" content="https://meridianlabssoftware.com/shopify-accessibility/">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="../accessibility/assets/audit.css">
+  <style>
+    .matters p { margin: 0 0 16px; max-width: 64ch; }
+    .after-limits { margin: 24px 0 0; max-width: 70ch; }
+    .tariff-one tbody th { width: 30%; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Shopify store accessibility audit",
+  "serviceType": "Accessibility testing",
+  "areaServed": "US",
+  "provider": {
+    "@type": "Organization",
+    "name": "Meridian Labs",
+    "url": "https://meridianlabssoftware.com/",
+    "email": "admin@meridianlabssoftware.com"
+  },
+  "offers": [
+    {"@type": "Offer", "name": "Shopify store audit (launch price)", "price": "395", "priceCurrency": "USD", "description": "Home page, one product page, cart and checkout entry, desktop and mobile, WCAG 2.2 A and AA. Launch price for our first ten stores; list price US$495."}
+  ]
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-keyboard" viewBox="0 0 48 48"><rect x="4" y="12" width="40" height="24" rx="4"/><path d="M11 19h2M17 19h2M23 19h2M29 19h2M35 19h2M11 25h2M17 25h2M23 25h2M29 25h2M35 25h2M15 30h18"/></symbol>
+    <symbol id="i-listen" viewBox="0 0 48 48"><path d="M8 19v10h7l9 8V11l-9 8z"/><path d="M31 18c2 1.6 3 3.7 3 6s-1 4.4-3 6M36 13c3.6 3 5.5 6.8 5.5 11S39.6 32 36 35"/></symbol>
+    <symbol id="i-fixlist" viewBox="0 0 48 48"><path d="M10 8h28v32H10z"/><path d="M16 17l3 3 6-6M16 29l3 3 6-6M29 18h4M29 30h4"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 48 48"><circle cx="21" cy="21" r="12"/><path d="M30 30l11 11M21 15v12M15 21h12"/></symbol>
+    <symbol id="i-contrast" viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 8v32a16 16 0 0 0 0-32z" style="fill:currentColor"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 48 48"><path d="M5 8h6l5 22h22l5-15H13"/><circle cx="19" cy="38" r="3"/><circle cx="35" cy="38" r="3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="30" rx="4"/><path d="M7 19h34M16 6v8M32 6v8M16 27h4M28 27h4M16 33h4"/></symbol>
+    <symbol id="i-price" viewBox="0 0 48 48"><path d="M24 6H40v16L22 40 8 26z"/><circle cx="33" cy="13" r="2.5"/></symbol>
+    <symbol id="i-retest" viewBox="0 0 48 48"><path d="M38 20A14 14 0 0 0 12 15M10 28a14 14 0 0 0 26 5"/><path d="M12 7v8h8M36 41v-8h-8"/></symbol>
+    <symbol id="i-report" viewBox="0 0 48 48"><path d="M12 5h17l9 9v29H12z"/><path d="M29 5v9h9M18 24h13M18 30h13M18 36h8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 48 48"><rect x="5" y="11" width="38" height="26" rx="4"/><path d="M6 13l18 13 18-13"/></symbol>
+    <symbol id="i-widget" viewBox="0 0 48 48"><circle cx="24" cy="24" r="15"/><circle cx="24" cy="17" r="3"/><path d="M16 22h16M24 22v8l-5 7M24 30l5 7"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 48 48"><path d="M17 26V11a3 3 0 0 1 6 0v12M23 22V8a3 3 0 0 1 6 0v14M29 22V11a3 3 0 0 1 6 0v15M17 24l-3-4a3 3 0 0 0-5 3l6 10c3 5 7 8 13 8h1c6 0 9-5 9-11v-4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#ffd23f"/><path d="M8 25V10l9 9 9-9v15" fill="none" stroke="#0b1533" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Meridian Labs<small>Shopify accessibility audits</small></span>
+    </a>
+    <nav aria-label="Page sections">
+      <ul class="nav">
+        <li><a href="#how">How we test</a></li>
+        <li><a href="#price">Price</a></li>
+        <li><a href="sample-report/">Sample report</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title">Can <mark>every</mark> customer buy from your store?</h1>
+        <p class="lede">Find the accessibility problems in your Shopify store before your customers do. Tested by a person, not just a scanner.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="sample-report/">See a sample report <svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#contact">Request an audit</a>
+        </div>
+        <ul class="hero-price">
+          <li>Launch price <strong>US$395</strong></li>
+          <li>List price <strong>US$495</strong></li>
+          <li>Report in <strong>5 business days</strong></li>
+        </ul>
+        <p class="assure"><svg aria-hidden="true" focusable="false"><use href="#i-receipt"/></svg><span><strong>You pay after you get the report.</strong> <span class="guarantee">If we don't find a real issue on these pages, you don't pay at all.</span></span></p>
+      </div>
+
+      <div class="sheet">
+        <div class="sheet-head">
+          <h2>What we do</h2>
+        </div>
+        <ul class="er">
+          <li>
+            <span class="picto" aria-hidden="true"><svg><use href="#i-keyboard"/></svg></span>
+            <p>We shop your store with <b>only a keyboard</b>, the way many people have to.</p>
+          </li>
+          <li>
+            <span class="picto" aria-hidden="true"><svg><use href="#i-listen"/></svg></span>
+            <p>We <b>listen to it with screen readers</b>, the way many blind customers shop.</p>
+          </li>
+          <li>
+            <span class="picto" aria-hidden="true"><svg><use href="#i-fixlist"/></svg></span>
+            <p>We tell you <b>what to fix first</b>, and where it lives in your theme.</p>
+          </li>
+        </ul>
+        <p class="sheet-foot">Try it: press <kbd>Tab</kbd> on your product page. Can you pick a size and reach Add to cart?</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-white why" aria-labelledby="why-title">
+    <div class="wrap">
+      <h2 class="title" id="why-title">Why store owners pick us</h2>
+      <ul class="er why-grid">
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-price"/></svg></span><p><b>One fixed price, on this page.</b> No quote to chase and no sales call.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-calendar"/></svg></span><p>Your report arrives <b>within 5 business days</b>.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-hand"/></svg></span><p>Every issue is <b>checked by hand</b>. No overlays, no scanner-only reports.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-report"/></svg></span><p>You pay <b>after</b> you get the report, and <b>one re-check</b> is free.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <h2 class="title" id="how-title">Two ways to read this. Same audit.</h2>
+      <p class="intro">The plain version is for you. The detailed version is for your developer or whoever looks after your theme.</p>
+
+      <div class="registers">
+        <div>
+          <h3 class="register">Plain version</h3>
+          <ul class="er">
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-cart"/></svg></span><p>We test <b>four pages</b>: home, a product, your cart and the start of checkout.</p></li>
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span><p>We zoom in and use a phone-sized screen to check <b>nothing gets cut off</b>.</p></li>
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-contrast"/></svg></span><p>We check prices, text and buttons are <b>easy to see</b>.</p></li>
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-report"/></svg></span><p>You get a <b>report</b> with a picture of every problem and how to fix it in Shopify.</p></li>
+            <li><span class="picto" aria-hidden="true"><svg><use href="#i-retest"/></svg></span><p>When you have fixed things, <b>we check again</b>, free.</p></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="register">Detailed version</h3>
+          <div class="detail">
+            <dl>
+              <div class="row"><dt>Benchmark</dt><dd><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>, Level A and AA.</dd></div>
+              <div class="row"><dt>Pages</dt><dd>Home page, one product page, cart, and checkout entry (up to the payment step). Desktop and mobile.</dd></div>
+              <div class="row"><dt>Manual testing</dt><dd>
+                <ul>
+                  <li>Keyboard only: reach and use every control, focus order, visible focus, no traps in menus, drawers or pop-ups</li>
+                  <li>Screen readers: VoiceOver with Safari on macOS and iOS; NVDA on Windows</li>
+                  <li>Zoom to 200% and reflow at 320 px wide</li>
+                  <li>Color contrast of text, prices, buttons and focus indicators, measured</li>
+                  <li>Variant pickers, add to cart messages, cart quantity controls and form labels</li>
+                </ul>
+              </dd></div>
+              <div class="row"><dt>Automated scan</dt><dd>axe-core at desktop (1280 px) and mobile (390 px) widths, as a starting point. Every result is checked by hand and false positives are removed.</dd></div>
+              <div class="row"><dt>Each issue records</dt><dd>A screenshot, where it is, who it affects, the WCAG 2.2 success criterion, steps to reproduce, and Shopify fix steps: which theme file or setting, which app, or which content in your Shopify admin.</dd></div>
+              <div class="row"><dt>Priority</dt><dd>Issues are prioritized so you fix whatever blocks a purchase first.</dd></div>
+              <div class="row"><dt>Your store</dt><dd>We test the public store like a customer would. We don't need your Shopify admin, and we never place orders or enter payment details.</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-cobalt" id="price" aria-labelledby="price-title">
+    <div class="wrap">
+      <h2 class="title" id="price-title">One fixed price.</h2>
+      <p class="intro">Launch price for our first ten stores. After that the list price is US$495.</p>
+      <div class="tablebox tiers-desktop" tabindex="0" role="region" aria-labelledby="price-caption">
+        <table class="tariff tariff-one">
+          <caption id="price-caption">Audit price in US dollars</caption>
+          <thead>
+            <tr>
+              <td></td>
+              <th scope="col" class="col-feature">Shopify store audit<span>For independent Shopify stores</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Price</th>
+              <td class="col-feature"><p class="price">US$395<small>Launch price for our first ten stores. List price US$495.</small></p></td>
+            </tr>
+            <tr>
+              <th scope="row">What's tested</th>
+              <td class="col-feature">Home page, one product page, cart and checkout entry, on desktop and mobile</td>
+            </tr>
+            <tr>
+              <th scope="row">Report delivered</th>
+              <td class="col-feature">Within 5 business days</td>
+            </tr>
+            <tr>
+              <th scope="row">Re-check</th>
+              <td class="col-feature">One free re-check of the same pages within 30 days of the report</td>
+            </tr>
+            <tr>
+              <th scope="row">Payment</th>
+              <td class="col-feature">Invoice sent with the report. Pay by card. If we don't find a real issue on these pages, you don't pay at all.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tiers-mobile">
+        <div class="tier-card feature">
+          <h3>Shopify store audit</h3>
+          <p class="for">For independent Shopify stores</p>
+          <p class="price">US$395</p>
+          <p class="gst">Launch price for our first ten stores. List price US$495.</p>
+          <dl>
+            <div><dt>What's tested</dt><dd>Home page, one product page, cart and checkout entry, on desktop and mobile</dd></div>
+            <div><dt>Report delivered</dt><dd>Within 5 business days</dd></div>
+            <div><dt>Re-check</dt><dd>One free re-check of the same pages within 30 days of the report</dd></div>
+            <div><dt>Payment</dt><dd>Invoice sent with the report. Pay by card. If we don't find a real issue on these pages, you don't pay at all.</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="fineprint">All prices in US dollars. The price is fixed for the four pages shown; if you'd like more pages tested, we quote the extra in writing before we start. Our audit terms come with the invoice.</p>
+    </div>
+  </section>
+
+  <section class="band band-white" id="why-it-matters" aria-labelledby="matters-title">
+    <div class="wrap faq-wrap">
+      <h2 class="title" id="matters-title">Why this matters for a US store</h2>
+      <div class="matters">
+        <p>People who use screen readers, keyboards or zoom shop online like everyone else. If they can't choose a size or find the cart, they leave.</p>
+        <p>It is also a legal question. In the US, claims that a website shuts out people with disabilities are usually brought under Title III of the Americans with Disabilities Act, and online stores are the most common target. Seyfarth Shaw <a href="https://www.adatitleiii.com/2026/03/federal-court-website-accessibility-lawsuit-filings-bounce-back-in-2025/">counted 3,117 website accessibility lawsuits filed in federal court in 2025</a>. UsableNet found that in the first half of 2025, <a href="https://blog.usablenet.com/2025-midyear-accessibility-lawsuit-report-key-legal-trends">about two in three digital accessibility lawsuits were against companies with less than $25 million in annual revenue</a>, and that ecommerce accounted for 69% of cases.</p>
+        <p>An audit can't tell you whether anyone will make a claim, and we make no promises about legal outcomes. What it does show is what's stopping real customers on the pages that make you money, and how to fix it. If you've received a demand letter, talk to a lawyer. Our report can help you and them understand what's wrong on the site.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-ink" aria-labelledby="report-title">
+    <div class="wrap excerpt">
+      <div>
+        <h2 class="title" id="report-title">Every problem, with who it affects and how to fix it in Shopify.</h2>
+        <p class="intro">This is one issue from our sample report for a made-up store. You or your developer can act on it the same day.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="sample-report/">Read the full sample report <svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <article class="finding" aria-label="Sample issue from a report">
+        <p class="finding-top"><span class="tag p1">Blocker</span><span class="wcag">WCAG 1.3.1, 4.1.2 (Level A)</span></p>
+        <h3>The size and color pickers have no name</h3>
+        <dl>
+          <div><dt>Who it affects</dt><dd>Screen reader users hear "popup button, Medium" with no idea whether it's the size or the color, so some can't choose the product they want.</dd></div>
+          <div><dt>Check it yourself</dt><dd>On a Mac, turn on VoiceOver (Command + F5) and press Tab until you reach the size picker. Listen for the word "Size".</dd></div>
+          <div><dt>How to fix it</dt><dd>
+<pre tabindex="0" role="region" aria-label="Code example: before and after, in the theme's variant picker snippet"><code><del>&lt;select name="options[{{ option.name | escape }}]"&gt;</del>
+<ins>&lt;label for="Option-{{ section.id }}-{{ forloop.index0 }}"&gt;
+  {{ option.name }}
+&lt;/label&gt;
+&lt;select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+  name="options[{{ option.name | escape }}]"&gt;</ins></code></pre>
+          </dd></div>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="steps-title">
+    <div class="wrap">
+      <h2 class="title" id="steps-title">How it works</h2>
+      <p class="intro">Four steps, all by email. No calls needed unless you want one.</p>
+      <ol class="steps-er">
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-mail"/></svg></span><h3>1. Send your store address</h3><p>Email us your store and, if you like, the product page you want tested. We confirm the four pages with you.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-keyboard"/></svg></span><h3>2. We test</h3><p>Keyboard, screen readers, zoom, contrast and a scan, on desktop and mobile. No admin access needed.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-report"/></svg></span><h3>3. Get the report</h3><p>It arrives within 5 business days, with the invoice. Pay by card once you've read it.</p></li>
+        <li><span class="picto" aria-hidden="true"><svg><use href="#i-retest"/></svg></span><h3>4. Fix, then re-check</h3><p>You or your developer make the fixes. We re-check the same pages once, free, within 30 days.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band band-white" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-wrap">
+      <h2 class="title" id="faq-title">Questions store owners ask</h2>
+      <div class="faq">
+        <details>
+          <summary>Why these four pages?</summary>
+          <div><p>They're where a customer finds, chooses and pays for a product. A problem there stops a sale. Most Shopify stores reuse the same templates, so fixing these pages usually fixes the same problem everywhere. Where that's not the case, the report says so.</p></div>
+        </details>
+        <details>
+          <summary>Do you need access to my Shopify admin?</summary>
+          <div><p>No. We test the public store like a customer would. We never place orders or enter payment details.</p></div>
+        </details>
+        <details>
+          <summary>Is this legal advice?</summary>
+          <div><p>No. It's testing and remediation guidance, not legal advice or a compliance guarantee. If you have a legal question, including a demand letter, please speak to a lawyer.</p></div>
+        </details>
+        <details>
+          <summary>What about Shopify checkout?</summary>
+          <div><p>Shopify runs most of checkout itself, and store owners can only change part of it. We test the entry step: going from your cart into checkout and the first screen, up to the payment step. We report on what you control, such as your cart, checkout branding and any checkout apps, and we point out anything that sits with Shopify so you can raise it with their support team.</p></div>
+        </details>
+        <details>
+          <summary>What if an app causes the problem?</summary>
+          <div><p>Reviews widgets, pop-ups, chat and upsell apps cause a lot of the problems we find. The report lists app issues in their own section and names the app. Often the fix is an app setting. If it isn't, you can send the finding to the app's developer, or swap to an app that works better.</p></div>
+        </details>
+        <details>
+          <summary>Who does the testing?</summary>
+          <div><p>Meridian Labs. Automated scans find roughly a third of accessibility issues, so every page is also tested by hand.</p></div>
+        </details>
+        <details>
+          <summary>Can you make the fixes for us?</summary>
+          <div><p>If you'd rather not do them yourself, we can quote a fixed price for the changes in your theme after the audit. Ongoing monthly monitoring is also available, which re-tests your key pages after theme or app updates.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="limits-title">
+    <div class="wrap">
+      <h2 class="title" id="limits-title">What this audit isn't.</h2>
+      <p class="intro">Honest limits, so you know exactly what you're buying.</p>
+      <div class="limits">
+        <div class="limit">
+          <span class="picto cross" aria-hidden="true"><svg><use href="#i-report"/></svg></span>
+          <div>
+          <p class="quote">A certificate or a legal sign-off.</p>
+          <p>Our audits are testing and remediation guidance, not legal advice or a compliance guarantee. We don't issue certificates or badges. The report says what we found on the pages tested, on the dates tested, and how to fix it.</p>
+          </div>
+        </div>
+        <div class="limit">
+          <span class="picto cross" aria-hidden="true"><svg><use href="#i-widget"/></svg></span>
+          <div>
+          <p class="quote">"Just add this widget."</p>
+          <p>We don't sell or recommend accessibility overlays or widgets. They don't change the code underneath, and many people who use assistive technology find they get in the way. In January 2025 the FTC ordered one overlay company, accessiBe, to pay $1 million over claims about what its product could do.</p>
+          </div>
+        </div>
+      </div>
+      <p class="after-limits">It also isn't the whole site. The audit covers four pages. Fixing them usually fixes the same templates across the store, and we'll tell you where it doesn't.</p>
+    </div>
+  </section>
+</main>
+
+<section class="close" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div>
+      <h2 id="contact-title">Send us your store address.</h2>
+      <p>Tell us your store and the product page you'd like tested. We usually reply within one business day to confirm the pages.</p>
+      <p>Audits are carried out by William Lee for Meridian Labs.</p>
+    </div>
+    <div class="mailbox">
+      <p>Email</p>
+      <p class="addr" id="addr">admin@meridianlabssoftware.com</p>
+      <div class="row">
+        <a class="btn btn-primary" href="mailto:admin@meridianlabssoftware.com?subject=Shopify%20accessibility%20audit">
+          <svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48"><use href="#i-mail"/></svg>
+          Write an email
+        </a>
+        <button class="btn" type="button" id="copy">Copy address</button>
+      </div>
+      <p role="status" id="copy-status"></p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <p><strong>Meridian Labs</strong> · Level 1, 5 George Street, North Strathfield NSW 2137, Australia · admin@meridianlabssoftware.com</p>
+    </div>
+    <div>
+      <p><a href="/">Meridian Labs home</a> · <a href="sample-report/">Sample report</a></p>
+      <p>Audit terms are included with your invoice. This page is built to WCAG 2.2 AA. If something doesn't work for you, email us and we'll fix it.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy');
+    var status = document.getElementById('copy-status');
+    var addr = 'admin@meridianlabssoftware.com';
+    btn.addEventListener('click', function () {
+      function done(msg) { status.textContent = msg; }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(function () { done('Address copied.'); }, function () { select(); });
+      } else { select(); }
+      function select() {
+        var r = document.createRange(); r.selectNodeContents(document.getElementById('addr'));
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        done('Address selected. Press Ctrl+C or Cmd+C to copy.');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
