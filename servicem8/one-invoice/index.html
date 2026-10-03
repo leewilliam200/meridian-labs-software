@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Help for One Invoice by Meridian Labs, a ServiceM8 add-on that turns several finished jobs for one client into a single invoice.">
+<title>One Invoice help | Meridian Labs</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="home" href="https://meridianlabssoftware.com/">Meridian Labs</a>
+<h1>One Invoice</h1>
+<p class="lede">Bill several finished jobs for the same client on one invoice, without double billing.</p>
+<p class="updated">Help guide. Last updated 4 October 2026.</p>
+
+<figure>
+<img src="pick-jobs.jpg" alt="One Invoice window on a client card listing three finished jobs with checkboxes, a layout choice and a Combine into one invoice button">
+<figcaption>One Invoice on a client card. All names and jobs shown are made up.</figcaption>
+</figure>
+
+<h2>What it does</h2>
+<p>ServiceM8 makes one invoice per job. Property managers, strata, schools and commercial clients often want one bill for all the work you did for them that month. One Invoice takes the finished jobs you pick for a client and creates a single new invoice job with their billing on it. Each original job is set to $0 and labelled, so nothing gets billed twice.</p>
+
+<h2>Getting started</h2>
+<ol>
+<li>In ServiceM8 Online, go to <b>Account &rsaquo; Features &amp; Integrations</b> and open <b>One Invoice by Meridian Labs</b>.</li>
+<li>Click <b>Connect</b> and allow the permissions listed below.</li>
+<li>Open any client and you'll see a <b>One Invoice</b> button at the top of the client card.</li>
+</ol>
+
+<h3>Permissions it asks for, and why</h3>
+<table>
+<tr><th>Permission</th><th>Used for</th></tr>
+<tr><td>Read and manage jobs, create jobs</td><td>Finding the client's finished jobs and creating the combined invoice job</td></tr>
+<tr><td>Read and manage job materials</td><td>Copying billing lines to the combined invoice, switching them off on the originals, and switching them back on if you undo</td></tr>
+<tr><td>Read customers</td><td>The client's name and billing address</td></tr>
+<tr><td>Add job diary items</td><td>A note on every job it touches, saying what it did</td></tr>
+</table>
+
+<h2>Combining jobs</h2>
+<ol>
+<li>Open the client and click <b>One Invoice</b>. It lists the client's jobs that are <b>Completed</b>, whose invoice <b>hasn't been sent</b> and that <b>have no payment</b>.</li>
+<li>Untick any job you don't want included. You need at least two.</li>
+<li>Choose a layout:
+<ul>
+<li><b>One line per job</b>: one line for each job, showing the job number, address and description, with that job's total. If a job has items on different tax rates, it gets one line per tax rate.</li>
+<li><b>Every line listed</b>: every item from every job, each starting with its job number.</li>
+</ul></li>
+<li>Click <b>Combine into one invoice</b>, read the summary, then click <b>Create invoice</b>.</li>
+<li>Click <b>Open invoice</b> to check it, then send it the way you always do. ServiceM8's own invoice template, email and payment options are used as normal.</li>
+</ol>
+
+<figure>
+<img src="invoice.jpg" alt="The combined invoice job's billing tab with one line per job and a total including GST">
+<figcaption>The combined invoice: one line per job, GST worked out by ServiceM8 as usual.</figcaption>
+</figure>
+
+<h2>What happens to the original jobs</h2>
+<ul>
+<li>Their billing lines are <b>switched off</b>, not deleted, so they can be put back.</li>
+<li>A $0 line called <b>Billed on a combined invoice</b> is added, and the job diary says which invoice they're on.</li>
+<li>Their total becomes $0, so ServiceM8 treats them as settled. When you approve a $0 job, ServiceM8 doesn't send it to Xero, MYOB or QuickBooks.</li>
+</ul>
+
+<h2>Accounting software</h2>
+<p>The combined invoice is an ordinary ServiceM8 invoice and goes to your accounting software when you approve it, like any other. Where possible, its lines reuse the items already on the original jobs, so no new items are added to your item list. Lines made up of several items (one line per job) use the job's biggest item.</p>
+<p>If ServiceM8 asks you to pick an income account for new items when you approve, you can set a default under <b>Settings &rsaquo; Preferences &rsaquo; Invoicing</b>.</p>
+
+<h2>Undo</h2>
+<p>Open One Invoice on the same client. Combined invoices that haven't been sent are listed under <b>Combined invoices you can still undo</b>. Undo switches the original jobs' lines back on, removes the $0 lines and deletes the combined invoice job.</p>
+<p>If you'd already approved the combined invoice to your accounting software, void it there as well. One Invoice can't change your accounting software.</p>
+
+<h2>Limits</h2>
+<ul>
+<li>Up to 25 jobs and 80 billing lines per combined invoice. Combine larger batches in two goes.</li>
+<li>The combined invoice is a new job in ServiceM8, so it may count toward your plan's monthly job allowance like any other job.</li>
+<li>Available in the Online Dashboard. In the app, open the combined invoice like any other job.</li>
+</ul>
+
+<h2>Questions</h2>
+<h3>A job I expected isn't in the list.</h3>
+<p>Only jobs that are Completed, unsent and unpaid can be combined. Jobs already on a combined invoice are shown under that invoice instead. Jobs with nothing to bill are listed but can't be ticked.</p>
+<h3>The totals differ by a cent.</h3>
+<p>ServiceM8 works out GST per line. Rounding on a combined line can occasionally differ by a cent from the sum of the originals. One Invoice tells you if the totals don't match.</p>
+
+<h2>Support</h2>
+<p>Email <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a>. We usually reply within one business day (Sydney time). Please don't send customer details or passwords by email; a job number is enough for us to help.</p>
+<p>One Invoice is made by Meridian Labs, an independent developer. It is not made or supported by ServiceM8. See our <a href="privacy/">privacy policy</a>.</p>
+
+<footer>Meridian Labs &middot; ABN 88 792 692 097 &middot; PO Box 64, Auburn NSW 1835, Australia</footer>
+</body>
+</html>

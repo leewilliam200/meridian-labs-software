@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Privacy policy for One Invoice by Meridian Labs, a ServiceM8 add-on: what ServiceM8 data it reads and changes, what it keeps, and your rights.">
+<title>One Invoice privacy policy | Meridian Labs</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<a class="home" href="../">One Invoice help</a>
+<h1>One Invoice privacy policy</h1>
+<p class="updated">Last updated 4 October 2026.</p>
+
+<p>This policy covers One Invoice, an add-on for ServiceM8 made by Meridian Labs (ABN 88 792 692 097), an Australian sole trader. "We" means Meridian Labs. "You" means the ServiceM8 account that connects the add-on and the staff who use it. It sits alongside <a href="https://www.servicem8.com/privacy-policy">ServiceM8's own privacy policy</a>, which covers everything ServiceM8 does with your account.</p>
+
+<h2>The short version</h2>
+<ul>
+<li>One Invoice reads a client's finished jobs and their billing lines, and creates or changes jobs in your account only when you click Create invoice or Undo.</li>
+<li>Everything it reads and writes stays in your ServiceM8 account. We don't run our own servers or database and keep no copy of your data.</li>
+<li>We don't sell, share or analyse your data, and we don't use it to train AI.</li>
+</ul>
+
+<h2>What the add-on reads</h2>
+<ul>
+<li><b>Jobs:</b> job number, status, client, job address, description, value, completion date, and whether the invoice was sent or paid.</li>
+<li><b>Billing lines on those jobs:</b> item name, quantity, price, tax rate and linked item.</li>
+<li><b>Clients:</b> the client's name and billing address.</li>
+</ul>
+<p>It doesn't read contact people, phone numbers, email addresses, notes, photos, attachments, payment details or card data.</p>
+
+<h2>What the add-on changes, and only when you ask</h2>
+<ul>
+<li><b>Create invoice:</b> creates one new job for the client with the combined billing lines; switches off the billing lines on the original jobs and adds a $0 line to each; adds a note to the diary of each job it touches.</li>
+<li><b>Undo:</b> switches those lines back on, removes the $0 lines, adds diary notes and deletes the combined job.</li>
+<li>To make Undo possible, it saves a short record on the combined job (which original jobs and lines were involved) using ServiceM8's add-on storage. That record lives in your ServiceM8 account and is removed with the job.</li>
+</ul>
+
+<h2>Where it runs and what we keep</h2>
+<p>The add-on runs as a ServiceM8-hosted function. ServiceM8 gives it a short-lived access token for each request. The data it reads is processed in memory and discarded when the request ends.</p>
+<p>The function writes short technical log lines (your ServiceM8 account ID, how many jobs and lines were combined, the layout chosen, and error messages). These contain no client names, addresses or amounts. ServiceM8's hosting holds them, and we read them only to fix problems.</p>
+<p>The window uses no cookies or tracking.</p>
+
+<h2>What we collect directly</h2>
+<p>If you email us for support, we keep your email and whatever you choose to include, so we can answer and keep a record of the conversation. We use it for nothing else. Please don't send client details or passwords; a job number is enough.</p>
+<p>If you pay for the add-on through ServiceM8's billing, ServiceM8 handles the payment. We see the account name and amount in ServiceM8's payout reports, and never see card details.</p>
+
+<h2>Who we share it with</h2>
+<p>Nobody, except where the law requires it. ServiceM8 provides the hosting and billing that the add-on runs on. Combined invoices reach your accounting software only through ServiceM8's own integration, when you approve them.</p>
+
+<h2>Your rights</h2>
+<p>You can disconnect the add-on at any time from <b>Features &amp; Integrations</b> in ServiceM8. That stops all access straight away. Combined invoices and diary notes already created stay in your account, like any other job. You can ask what support emails we hold about you, ask us to correct them, or ask us to delete them, by writing to the address below. We handle personal information under the Australian Privacy Principles in the Privacy Act 1988 (Cth). If you're unhappy with how we've handled a request, you can complain to the Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au/">oaic.gov.au</a>.</p>
+
+<h2>Security</h2>
+<p>Access tokens are issued by ServiceM8 for each request, expire within 15 minutes, and are never logged or stored by us. The add-on can only change jobs and billing lines, and only when someone with access to the client clicks Create invoice or Undo.</p>
+
+<h2>Changes</h2>
+<p>If the add-on starts reading or changing more data, or keeping anything, we'll update this page and the date at the top before that change goes live.</p>
+
+<h2>Contact</h2>
+<p>Meridian Labs, PO Box 64, Auburn NSW 1835, Australia. <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a></p>
+
+<footer>One Invoice is made by Meridian Labs, an independent developer. It is not made or supported by ServiceM8.</footer>
+</body>
+</html>
