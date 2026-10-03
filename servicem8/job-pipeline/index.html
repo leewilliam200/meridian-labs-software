@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Help for Job Pipeline by Meridian Labs, a ServiceM8 add-on that shows every open job on one board, from quote to paid.">
+<title>Job Pipeline help | Meridian Labs</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="home" href="https://meridianlabssoftware.com/">Meridian Labs</a>
+<h1>Job Pipeline</h1>
+<p class="lede">Every open job on one board, from quote to paid, so nothing slips through.</p>
+<p class="updated">Help guide. Last updated 3 October 2026.</p>
+
+<figure>
+<img src="board.jpg" alt="Job Pipeline board: Quote to send, Quote sent and To schedule columns with job cards showing client, address, value and days in stage">
+<figcaption>The first three columns of the board in the Online Dashboard. All names and jobs shown are made up.</figcaption>
+</figure>
+
+<h2>What it does</h2>
+<p>Job Pipeline is an add-on for ServiceM8. It reads the jobs already in your account and lays them out on a board with one column per stage. You can see at a glance which quotes need chasing, which accepted jobs still have no booking, which multi-visit jobs have run out of booked visits, and which invoices are still unpaid.</p>
+<p>It only reads your data. It never changes a job, a booking or an invoice, and it doesn't store any of your data anywhere else.</p>
+
+<h2>Getting started</h2>
+<ol>
+<li>In ServiceM8 Online, go to <b>Account &rsaquo; Features &amp; Integrations</b> (the Add-on Store) and open <b>Job Pipeline by Meridian Labs</b>.</li>
+<li>Click <b>Connect</b>. ServiceM8 asks you to allow the add-on to read your account. The permissions it asks for are listed below.</li>
+<li>That's it. There's nothing to set up and no separate login.</li>
+</ol>
+
+<h3>Permissions it asks for, and why</h3>
+<table>
+<tr><th>Permission</th><th>Used for</th></tr>
+<tr><td>Read jobs</td><td>Job numbers, status, address, description, value and the dates used to work out each job's stage</td></tr>
+<tr><td>Read schedule</td><td>Bookings and check-ins, to count visits and find the next booked visit</td></tr>
+<tr><td>Read customers</td><td>Client names shown on each card</td></tr>
+<tr><td>Read staff</td><td>Staff names on bookings, and the staff filter</td></tr>
+<tr><td>Read job categories</td><td>Category colours on cards, and the category filter</td></tr>
+</table>
+<p>All permissions are read-only.</p>
+
+<h2>Opening the board</h2>
+<ul>
+<li><b>Online Dashboard:</b> open the <b>Addons</b> page from the home screen and choose <b>Job Pipeline</b>. The board opens as a full page.</li>
+<li><b>iPhone and iPad app:</b> tap <b>More</b>, then <b>Job Pipeline</b>. On a phone the columns stack one under the other; tap a column heading to open or close it.</li>
+</ul>
+<p>Click or tap any card to open that job in ServiceM8.</p>
+
+
+
+<h2>The columns</h2>
+<table>
+<tr><th>Column</th><th>Which jobs land here</th></tr>
+<tr><td>Quote to send</td><td>Jobs in Quote status where the quote hasn't been sent yet</td></tr>
+<tr><td>Quote sent</td><td>Jobs in Quote status where the quote has been sent</td></tr>
+<tr><td>To schedule</td><td>Work orders with no visits done and nothing booked</td></tr>
+<tr><td>Booked</td><td>Work orders with a visit booked and no visits done yet</td></tr>
+<tr><td>In progress</td><td>Work orders where at least one visit has happened (multi-visit and project work)</td></tr>
+<tr><td>To invoice</td><td>Completed jobs where the invoice hasn't been sent and no payment is recorded</td></tr>
+<tr><td>Awaiting payment</td><td>Completed jobs where the invoice was sent but no payment is recorded</td></tr>
+<tr><td>Paid</td><td>Completed jobs paid recently (the last 14 days unless you change it)</td></tr>
+</table>
+<p>Each column heading shows how many jobs are in it and their total value. Inside a column, the jobs that have waited longest are at the top. The number of days on each card is how long the job has been in its current stage.</p>
+<p>A visit counts as done once its booking time has passed or a staff member has checked in. Several staff on the same booking count as one visit.</p>
+
+<h2>Flags</h2>
+<table>
+<tr><th>Flag</th><th>Meaning</th></tr>
+<tr><td><span class="flag">Follow up</span></td><td>The quote was sent 7 or more days ago and hasn't been accepted</td></tr>
+<tr><td><span class="flag">Not booked</span></td><td>The work order has had no booking for 7 or more days</td></tr>
+<tr><td><span class="flag red">No next visit</span></td><td>Work has started but there's no future visit booked</td></tr>
+<tr><td><span class="flag red">Overdue</span></td><td>The invoice was sent 30 or more days ago and is still unpaid</td></tr>
+</table>
+<p>Tick <b>Needs attention</b> to show only flagged jobs.</p>
+<figure>
+<img src="needs-attention.jpg" alt="Board with Needs attention ticked, showing two in-progress jobs flagged No next visit">
+<figcaption>Needs attention ticked: only the flagged jobs remain.</figcaption>
+</figure>
+
+<h2>Search and filters</h2>
+<ul>
+<li><b>Search</b> matches client name, address, job description and job number.</li>
+<li><b>Staff</b> shows jobs that staff member has been booked on, past or future.</li>
+<li><b>Category</b> shows jobs in one job category.</li>
+<li><b>Refresh</b> reloads the board from ServiceM8. The board doesn't refresh by itself.</li>
+</ul>
+
+<h2>Settings</h2>
+<p>A Business Owner can change the flag timings in <b>Settings &rsaquo; Preferences &rsaquo; Add-ons &rsaquo; Job Pipeline</b>: when sent quotes get flagged, when unbooked work orders get flagged, when unpaid invoices get flagged, how long paid jobs stay on the board, and how old a quote or unpaid invoice can be before it's left off the board.</p>
+
+<h2>Jobs that aren't shown</h2>
+<ul>
+<li>Unsuccessful and deleted jobs.</li>
+<li>Paid jobs older than the paid window.</li>
+<li>Quotes and unpaid invoices older than 180 days, so years-old abandoned quotes don't clutter the board. The column tells you how many were left off. You can change the cut-off in Settings.</li>
+</ul>
+
+<h2>Questions</h2>
+<h3>Can Job Pipeline change my jobs?</h3>
+<p>No. It has read-only access and never edits, moves or deletes anything. To change a job, click its card and edit it in ServiceM8 as usual.</p>
+<h3>A job is in the wrong column. Why?</h3>
+<p>The column comes from the job's status in ServiceM8 plus its bookings and invoice and payment records. A common cause is a payment recorded only in your accounting software: if it never reached ServiceM8, the job stays in Awaiting payment. Open the job and check its status, bookings and payments, then press Refresh.</p>
+<h3>Does it work with a lot of jobs?</h3>
+<p>Yes. It loads open work and recent history only. In very large accounts a note may say some older bookings weren't counted; the stages are still correct.</p>
+<h3>What does it cost, and how do I cancel?</h3>
+<p>The price is shown on the add-on's page in the Add-on Store and is added to your ServiceM8 bill. To stop using it, open it in <b>Features &amp; Integrations</b> and disconnect it. Billing through ServiceM8 stops from there.</p>
+
+<h2>Support</h2>
+<p>Email <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a>. We usually reply within one business day (Sydney time). Please don't send customer details or passwords by email; a job number is enough for us to help.</p>
+<p>Job Pipeline is made by Meridian Labs, an independent developer. It is not made or supported by ServiceM8. See our <a href="privacy/">privacy policy</a>.</p>
+
+<footer>Meridian Labs &middot; ABN 88 792 692 097 &middot; PO Box 64, Auburn NSW 1835, Australia</footer>
+</body>
+</html>
