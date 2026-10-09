@@ -32,8 +32,10 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 32px 16px 48px; display: grid; gap: 48px; }
 .hero { display: grid; gap: 28px; align-items: center; }
 .copy { display: grid; gap: 16px; justify-items: start; }
-.brand { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 26px; line-height: 1; }
-.brand img { border-radius: 7px; display: block; }
+.brand { display: flex; align-items: center; gap: 7px; margin: 0; font-size: 26px; line-height: 1; }
+/* The app's mark (docs/DESIGN.md Logo in the app repo): the pin alone, outlined on light pages,
+   plain on dark ones; 36px beside 26px type, the app page bar's proportions. */
+.brand img { display: block; width: 28px; height: 36px; }
 h1 { margin: 0; font-size: clamp(2.25rem, 8.5vw, 3.4rem); line-height: 1.05; text-wrap: balance; }
 .ticket { display: inline-block; background: var(--ticket); color: var(--ticket-price); border: 2px solid #141414; border-radius: 2px; padding: 0 0.12em; font-variant-numeric: tabular-nums; line-height: 1; }
 .lede { margin: 0; font-size: 19px; max-width: 34ch; }
