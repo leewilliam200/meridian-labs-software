@@ -1,36 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BrokeMap shows cheap meals near you in Sydney: what you can eat for A$15 or less, open right now. Made by Meridian Labs.">
-<title>BrokeMap | Meridian Labs</title>
-<link rel="stylesheet" href="style.css">
+<title>BrokeMap: cheap meals around Sydney</title>
+<meta name="description" content="A free map of cheap meals around Sydney: what you can eat for $15 or less, open right now, with the price you actually pay and the catch up front.">
+<meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BrokeMap: cheap meals around Sydney">
+<meta property="og:description" content="What can I eat near me for $15 right now? A free map of cheap meals around Sydney.">
+<meta property="og:url" content="https://meridianlabssoftware.com/brokemap/">
+<meta property="og:image" content="https://meridianlabssoftware.com/brokemap/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo-120.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.5..100,400..900&display=swap">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-<a class="home" href="/">Meridian Labs</a>
-<h1>BrokeMap</h1>
-<p class="updated">Cheap meals near you in Sydney.</p>
+<main class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <div class="copy">
+      <p class="brand"><img src="logo-120.png" width="44" height="44" alt=""><span class="cond">BrokeMap</span></p>
+      <h1 id="title" class="cond">What can I eat near me for <span class="ticket">$15</span> right now?</h1>
+      <p class="lede">A free map of cheap meals around Sydney. The price you actually pay, the catch, and whether it's open now.</p>
+      <a class="open cond" href="https://brokemap.meridianlabssoftware.com/">Open BrokeMap</a>
+      <p class="small">No account needed to browse. Works in your phone's browser.</p>
+    </div>
+    <figure class="phone">
+      <img src="phone.jpg" width="390" height="844" alt="BrokeMap on a phone: a map of Sydney's CBD with yellow price tags, the cheapest one in red, and the cheapest meals as cards underneath.">
+    </figure>
+  </section>
 
-<p>BrokeMap answers one question: what can I eat near me for under $X right now? It shows meals around Sydney that cost A$15 or less, on a map, with the price you actually pay, any conditions (student card, lunch only, a drink you have to buy) and whether the place is open now.</p>
+  <section class="points" aria-label="About BrokeMap">
+    <div>
+      <h2 class="cond">Prices checked</h2>
+      <p>From our own checks and from people who ate there. Every meal says when it was last checked, so you can tell a fresh tip from an old one.</p>
+    </div>
+    <div>
+      <h2 class="cond">The catch, up front</h2>
+      <p>Student card, lunch only, a drink you have to buy: it's on the meal, and it's in the price we show.</p>
+    </div>
+    <div>
+      <h2 class="cond">No account to browse</h2>
+      <p>Sign in only to save meals or add one you found. There's no public profile, and your name never shows next to anything you add.</p>
+    </div>
+  </section>
 
-<p>Prices come from our own checks and from people who ate there. Each listing says where its facts came from and how recently someone confirmed them, so you can tell a fresh tip from an old one.</p>
-
-<h2>Where it's at</h2>
-<p>BrokeMap is in development and isn't open to the public yet. We're starting with Sydney.</p>
-
-<h2>Accounts</h2>
-<p>You can browse without an account. You only need one to save meals or to add and correct listings. You sign in with a code sent to your email, or with Google. There's no public profile, and your name is never shown next to anything you add.</p>
-
-<h2>Legal</h2>
-<ul>
-<li><a href="privacy/">Privacy policy</a></li>
-<li><a href="terms/">Terms of use</a></li>
-</ul>
-
-<h2>Contact</h2>
-<p>Meridian Labs, PO Box 64, Auburn NSW 1835, Australia. <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a></p>
-
-<footer>BrokeMap is made by Meridian Labs, an independent developer in Sydney.</footer>
+  <footer>
+    <p>BrokeMap is made by Meridian Labs, an independent developer in Sydney. PO Box 64, Auburn NSW 1835. <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a></p>
+    <p><a href="privacy/">Privacy policy</a> · <a href="terms/">Terms of use</a> · <a href="/">Meridian Labs</a></p>
+  </footer>
+</main>
 </body>
 </html>
