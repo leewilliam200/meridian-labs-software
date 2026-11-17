@@ -6,6 +6,9 @@
   <meta name="description" content="Meridian Labs makes free Framer website templates for small businesses and freelancers, plus a couple of small apps.">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="0o3uKlZGxLOutH1jjDZY_NyFTovdOxPVd10hVpQAnfQ" />
+  <link rel="icon" href="/brand/meridian-labs-mark-rounded.svg" type="image/svg+xml">
+  <link rel="icon" href="/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/brand/mark-180.png">
   <title>Meridian Labs</title>
   <style>
     * { box-sizing: border-box; }
@@ -20,11 +23,19 @@
       font-size: 17px;
     }
     h1 {
+      display: flex;
+      align-items: center;
+      gap: 14px;
       font-size: 42px;
       font-weight: 700;
       color: #000;
       margin: 0 0 12px 0;
       letter-spacing: -0.02em;
+    }
+    h1 .mark {
+      width: 48px;
+      height: 48px;
+      flex: none;
     }
     .tagline {
       font-size: 20px;
@@ -103,13 +114,14 @@
     @media (max-width: 600px) {
       body { padding: 40px 20px; }
       h1 { font-size: 34px; }
+      h1 .mark { width: 40px; height: 40px; }
       .tagline { font-size: 18px; }
     }
   </style>
 </head>
 <body>
   <main>
-  <h1>Meridian Labs</h1>
+  <h1><svg class="mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="22" fill="#0E1520"/><path fill="#F2AC3D" d="M22 74L22 54C22 45.025 29.275 37.75 38.25 37.75C47.225 37.75 54.5 45.025 54.5 54L54.5 74L45.5 74L45.5 54C45.5 49.996 42.254 46.75 38.25 46.75C34.246 46.75 31 49.996 31 54L31 74ZM45.5 74L45.5 54C45.5 45.025 52.775 37.75 61.75 37.75C70.725 37.75 78 45.025 78 54L78 74L69 74L69 54C69 49.996 65.754 46.75 61.75 46.75C57.746 46.75 54.5 49.996 54.5 54L54.5 74Z"/><circle fill="#F2AC3D" cx="50" cy="28" r="6"/></svg>Meridian Labs</h1>
   <p class="tagline">Website templates and small apps, made carefully.</p>
 
   <p>I&rsquo;m a solo developer in Sydney. Most of my time goes into Framer website templates for small businesses and freelancers who want a good site without starting from a blank page. I also make a couple of small apps.</p>

@@ -12,3 +12,4 @@ The Meridian Labs website. Published by **GitHub Pages** from the `main` branch 
 - `/summit/` and `/brokemap/` hold app privacy and terms pages that the app stores link to: never move them.
 - `/bimi/meridian-labs.svg` is the sender logo that inbox providers fetch for admin@ (BIMI DNS record).
 - `/demo/` is a short notice: the Seatwright demos were retired; `404.html` sends old `/demo/<venue>` links there.
+- `/brand/` holds the logo (option A "Arches", chosen 17 Nov 2026): SVG masters, PNG sizes, favicon. `/favicon.ico` and `/bimi/meridian-labs.svg` are built from it.
