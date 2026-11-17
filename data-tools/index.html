@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data APIs: Google Trends, SEO, Facebook Ads, YouTube | Meridian Labs</title>
-  <meta name="description" content="Pay-per-result APIs: Google Trends, keyword volume, backlinks, competitor keywords, Facebook ads, YouTube transcripts, jobs, funding rounds and tenders.">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Pay-per-result APIs: Google Trends, keyword volume, backlinks, competitor keywords, Facebook ads, YouTube transcripts, funding rounds and tenders.">
+  <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://meridianlabssoftware.com/data-tools/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Meridian Labs">
   <meta property="og:title" content="Data APIs: Google Trends, SEO, Facebook Ads, YouTube | Meridian Labs">
-  <meta property="og:description" content="Pay-per-result APIs: Google Trends, keyword volume, backlinks, competitor keywords, Facebook ads, YouTube transcripts, jobs, funding rounds and tenders.">
+  <meta property="og:description" content="Pay-per-result APIs: Google Trends, keyword volume, backlinks, competitor keywords, Facebook ads, YouTube transcripts, funding rounds and tenders.">
   <meta property="og:url" content="https://meridianlabssoftware.com/data-tools/">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
@@ -70,29 +70,6 @@
       "position": 3,
       "item": {
         "@type": "SoftwareApplication",
-        "name": "Greenhouse, Lever & Ashby Jobs Scraper + Salary",
-        "url": "https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Web",
-        "description": "Every open job from the company job boards you choose, from their public board APIs, with salary normalised into one format.",
-        "offers": {
-          "@type": "Offer",
-          "price": "0.002",
-          "priceCurrency": "USD",
-          "description": "per job"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Meridian Labs",
-          "url": "https://meridianlabssoftware.com/"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "item": {
-        "@type": "SoftwareApplication",
         "name": "Backlink Checker: Referring Domains & Spam Score",
         "url": "https://apify.com/meridianlabs/backlink-checker",
         "applicationCategory": "DeveloperApplication",
@@ -113,7 +90,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 5,
+      "position": 4,
       "item": {
         "@type": "SoftwareApplication",
         "name": "Competitor Keyword Research: Ranked Keywords API",
@@ -136,7 +113,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 6,
+      "position": 5,
       "item": {
         "@type": "SoftwareApplication",
         "name": "Facebook Ads Library Scraper: Meta Ad Library API",
@@ -159,7 +136,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 7,
+      "position": 6,
       "item": {
         "@type": "SoftwareApplication",
         "name": "YouTube Transcript API & Scraper",
@@ -182,7 +159,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 8,
+      "position": 7,
       "item": {
         "@type": "SoftwareApplication",
         "name": "Startup Funding Rounds & Founders API: SEC Form D",
@@ -205,7 +182,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 9,
+      "position": 8,
       "item": {
         "@type": "SoftwareApplication",
         "name": "TED Tenders & UK Find a Tender: Public Procurement",
@@ -360,7 +337,7 @@
 
   <p>Each tool is a hosted API: send a list, get one clean row per item back as JSON, CSV or Excel. You pay only for results, failed lookups are free, and Apify&rsquo;s free plan includes $5 of credit a month to try them.</p>
 
-  <p class="page-nav"><a href="#google-trends">Google Trends</a><a href="#keyword-search-volume">Keyword volume</a><a href="#jobs">Jobs + salary</a><a href="#backlinks">Backlinks</a><a href="#competitor-keywords">Competitor keywords</a><a href="#facebook-ads">Facebook ads</a><a href="#youtube-transcripts">YouTube transcripts</a><a href="#funding-rounds">Funding rounds</a><a href="#tenders">Tenders</a><a href="#ai-agents">AI agents (MCP)</a></p>
+  <p class="page-nav"><a href="#google-trends">Google Trends</a><a href="#keyword-search-volume">Keyword volume</a><a href="#backlinks">Backlinks</a><a href="#competitor-keywords">Competitor keywords</a><a href="#facebook-ads">Facebook ads</a><a href="#youtube-transcripts">YouTube transcripts</a><a href="#funding-rounds">Funding rounds</a><a href="#tenders">Tenders</a><a href="#ai-agents">AI agents (MCP)</a></p>
 
   <hr>
   <section class="tool" id="google-trends">
@@ -437,44 +414,6 @@ for row in client.dataset(run.default_dataset_id).iterate_items():
     </ul>
   </section>
   <hr>
-  <section class="tool" id="jobs">
-    <h3>Greenhouse, Lever &amp; Ashby Jobs Scraper + Salary</h3>
-    <p class="lead">Every open job from the company job boards you choose, from their public board APIs, with salary normalised into one format.</p>
-    <ul>
-        <li>Greenhouse, Lever, Ashby, Workable, Recruitee and Teamtailor boards</li>
-        <li>Board URLs, careers pages or plain company domains (the system is detected)</li>
-        <li>Salary as min, max, currency and period, with the source field kept</li>
-        <li>A monitor mode that returns only new or changed jobs each run</li>
-    </ul>
-    <p class="price">$2 per 1,000 jobs ($0.002 each). Company status rows and unsupported systems are free.</p>
-    <p class="cta"><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper">Open it on the Apify Store &rarr;</a></p>
-    <h4>Call it from Python</h4>
-    <pre><code>from apify_client import ApifyClient
-
-client = ApifyClient(&quot;&lt;YOUR_APIFY_TOKEN&gt;&quot;)
-run = client.actor(&quot;meridianlabs/greenhouse-lever-ashby-jobs-scraper&quot;).call(run_input={
-    &quot;companies&quot;: [&quot;https://job-boards.greenhouse.io/tubitv&quot;, &quot;https://jobs.ashbyhq.com/revenuecat&quot;],
-    &quot;onlyWithSalary&quot;: True,
-})
-for row in client.dataset(run.default_dataset_id).iterate_items():
-    if row[&quot;record_type&quot;] == &quot;job&quot;:
-        s = row[&quot;salary&quot;]
-        print(row[&quot;company&quot;], row[&quot;title&quot;], s[&quot;min&quot;], s[&quot;max&quot;], s[&quot;currency&quot;], s[&quot;period&quot;])</code></pre>
-    <p class="note"><code>pip install apify-client</code> (3.x). Your token is in Apify Console &rarr; Settings &rarr; API &amp; Integrations. It also runs from JavaScript, Make, Zapier, n8n and Google Sheets.</p>
-    <h4>Ready-made examples</h4>
-    <ul class="examples">
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/greenhouse-jobs-scraper-with-salary">Scrape Greenhouse jobs with salary</a></li>
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/lever-jobs-scraper-with-salary">Scrape Lever job boards with salary</a></li>
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/ashby-jobs-scraper-with-salary">Scrape Ashby job boards with salary</a></li>
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/workable-jobs-scraper-with-salary">Scrape Workable job boards with salary</a></li>
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/recruitee-jobs-scraper">Scrape Recruitee job boards</a></li>
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/teamtailor-jobs-scraper">Scrape Teamtailor career sites</a></li>
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/careers-page-scraper">Get every open job from a list of company websites</a></li>
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/remote-jobs-with-salary">Find remote jobs that list a salary</a></li>
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/new-job-postings-monitor">Get only the new job postings since your last run</a></li>
-        <li><a href="https://apify.com/meridianlabs/greenhouse-lever-ashby-jobs-scraper/examples/pay-transparency-salary-data">Collect salary ranges from pay-transparency job posts</a></li>
-    </ul>
-  </section>
   <hr>
   <section class="tool" id="backlinks">
     <h3>Backlink Checker: Referring Domains &amp; Spam Score</h3>
@@ -669,7 +608,6 @@ for row in client.dataset(run.default_dataset_id).iterate_items():
     <ul>
       <li><strong>Google Trends Scraper &amp; API</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/google-trends-scraper</code><br>MCP Registry: <code>com.meridianlabssoftware/google-trends</code></li>
       <li><strong>Keyword Search Volume &amp; CPC API + Google Trends</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/keyword-search-volume</code><br>MCP Registry: <code>com.meridianlabssoftware/keyword-search-volume</code></li>
-      <li><strong>Greenhouse, Lever &amp; Ashby Jobs Scraper + Salary</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/greenhouse-lever-ashby-jobs-scraper</code><br>MCP Registry: <code>com.meridianlabssoftware/ats-jobs</code></li>
       <li><strong>Backlink Checker: Referring Domains &amp; Spam Score</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/backlink-checker</code><br>MCP Registry: <code>com.meridianlabssoftware/backlink-checker</code></li>
       <li><strong>Competitor Keyword Research: Ranked Keywords API</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/competitor-keywords</code><br>MCP Registry: <code>com.meridianlabssoftware/competitor-keywords</code></li>
       <li><strong>Facebook Ads Library Scraper: Meta Ad Library API</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/facebook-ads-library-scraper</code></li>
@@ -681,7 +619,7 @@ for row in client.dataset(run.default_dataset_id).iterate_items():
   </section>
 
   <footer>
-    <p>Data source for Google Trends fields: Google Trends (<a href="https://www.google.com/trends">https://www.google.com/trends</a>). Not affiliated with or endorsed by Google, YouTube, Meta, Greenhouse, Lever, Ashby, Workable, Recruitee or Teamtailor.</p>
+    <p>Data source for Google Trends fields: Google Trends (<a href="https://www.google.com/trends">https://www.google.com/trends</a>). Not affiliated with or endorsed by Google, YouTube or Meta.</p>
     <p><strong>Meridian Labs</strong> &mdash; ABN <a href="https://abr.business.gov.au/ABN/View?abn=88792692097">88 792 692 097</a></p>
     <p>Contact: <a href="mailto:admin@meridianlabssoftware.com">admin@meridianlabssoftware.com</a></p>
     <p class="legal-links"><a href="/">Home</a> &middot; <a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Use</a></p>
