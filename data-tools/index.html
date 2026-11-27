@@ -6,14 +6,14 @@
   <link rel="icon" href="/brand/meridian-labs-mark-rounded.svg" type="image/svg+xml">
   <link rel="icon" href="/brand/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/brand/mark-180.png">
-  <title>Data APIs: Google Trends, SEO, Facebook Ads, YouTube | Meridian Labs</title>
-  <meta name="description" content="Pay-per-result APIs: Google Trends, keyword volume, backlinks, competitor keywords, Facebook ads, YouTube transcripts, funding rounds and tenders.">
+  <title>Data APIs: SEO, Keywords, Facebook Ads, YouTube | Meridian Labs</title>
+  <meta name="description" content="Pay-per-result APIs: keyword volume, backlinks, competitor keywords, Facebook ads, YouTube transcripts, funding rounds and tenders.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://meridianlabssoftware.com/data-tools/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Meridian Labs">
-  <meta property="og:title" content="Data APIs: Google Trends, SEO, Facebook Ads, YouTube | Meridian Labs">
-  <meta property="og:description" content="Pay-per-result APIs: Google Trends, keyword volume, backlinks, competitor keywords, Facebook ads, YouTube transcripts, funding rounds and tenders.">
+  <meta property="og:title" content="Data APIs: SEO, Keywords, Facebook Ads, YouTube | Meridian Labs">
+  <meta property="og:description" content="Pay-per-result APIs: keyword volume, backlinks, competitor keywords, Facebook ads, YouTube transcripts, funding rounds and tenders.">
   <meta property="og:url" content="https://meridianlabssoftware.com/data-tools/">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
@@ -25,29 +25,6 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "item": {
-        "@type": "SoftwareApplication",
-        "name": "Google Trends Scraper & API",
-        "url": "https://apify.com/meridianlabs/google-trends-scraper",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Web",
-        "description": "Google Trends for hundreds of keywords in one run, with a plain-English summary for every keyword.",
-        "offers": {
-          "@type": "Offer",
-          "price": "0.005",
-          "priceCurrency": "USD",
-          "description": "per keyword lookup"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Meridian Labs",
-          "url": "https://meridianlabssoftware.com/"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
       "item": {
         "@type": "SoftwareApplication",
         "name": "Keyword Search Volume & CPC API + Google Trends",
@@ -70,7 +47,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 3,
+      "position": 2,
       "item": {
         "@type": "SoftwareApplication",
         "name": "Backlink Checker: Referring Domains & Spam Score",
@@ -93,7 +70,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 4,
+      "position": 3,
       "item": {
         "@type": "SoftwareApplication",
         "name": "Competitor Keyword Research: Ranked Keywords API",
@@ -116,7 +93,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 5,
+      "position": 4,
       "item": {
         "@type": "SoftwareApplication",
         "name": "Facebook Ads Library Scraper: Meta Ad Library API",
@@ -139,7 +116,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 6,
+      "position": 5,
       "item": {
         "@type": "SoftwareApplication",
         "name": "YouTube Transcript API & Scraper",
@@ -162,7 +139,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 7,
+      "position": 6,
       "item": {
         "@type": "SoftwareApplication",
         "name": "Startup Funding Rounds & Founders API: SEC Form D",
@@ -185,7 +162,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 8,
+      "position": 7,
       "item": {
         "@type": "SoftwareApplication",
         "name": "TED Tenders & UK Find a Tender: Public Procurement",
@@ -340,46 +317,8 @@
 
   <p>Each tool is a hosted API: send a list, get one clean row per item back as JSON, CSV or Excel. You pay only for results, failed lookups are free, and Apify&rsquo;s free plan includes $5 of credit a month to try them.</p>
 
-  <p class="page-nav"><a href="#google-trends">Google Trends</a><a href="#keyword-search-volume">Keyword volume</a><a href="#backlinks">Backlinks</a><a href="#competitor-keywords">Competitor keywords</a><a href="#facebook-ads">Facebook ads</a><a href="#youtube-transcripts">YouTube transcripts</a><a href="#funding-rounds">Funding rounds</a><a href="#tenders">Tenders</a><a href="#ai-agents">AI agents (MCP)</a></p>
+  <p class="page-nav"><a href="#keyword-search-volume">Keyword volume</a><a href="#backlinks">Backlinks</a><a href="#competitor-keywords">Competitor keywords</a><a href="#facebook-ads">Facebook ads</a><a href="#youtube-transcripts">YouTube transcripts</a><a href="#funding-rounds">Funding rounds</a><a href="#tenders">Tenders</a><a href="#ai-agents">AI agents (MCP)</a></p>
 
-  <hr>
-  <section class="tool" id="google-trends">
-    <h3>Google Trends Scraper &amp; API</h3>
-    <p class="lead">Google Trends for hundreds of keywords in one run, with a plain-English summary for every keyword.</p>
-    <ul>
-        <li>Interest over time (hourly to monthly, 0&ndash;100)</li>
-        <li>Interest by country, state or US metro area</li>
-        <li>Top and rising related searches, with growth such as +350% or Breakout</li>
-        <li>A summary per keyword: momentum, year-on-year change, peak, seasonality</li>
-    </ul>
-    <p class="price">$5 per 1,000 keyword lookups ($0.005 each). Failed lookups are free.</p>
-    <p class="cta"><a href="https://apify.com/meridianlabs/google-trends-scraper">Open it on the Apify Store &rarr;</a></p>
-    <h4>Call it from Python</h4>
-    <pre><code>from apify_client import ApifyClient
-
-client = ApifyClient(&quot;&lt;YOUR_APIFY_TOKEN&gt;&quot;)
-run = client.actor(&quot;meridianlabs/google-trends-scraper&quot;).call(run_input={
-    &quot;keywords&quot;: [&quot;air fryer&quot;, &quot;standing desk&quot;],
-    &quot;geo&quot;: &quot;US&quot;,
-    &quot;timeRange&quot;: &quot;past_5_years&quot;,
-})
-for row in client.dataset(run.default_dataset_id).iterate_items():
-    print(row[&quot;keyword&quot;], row[&quot;status&quot;], row[&quot;summary&quot;][&quot;text&quot;])</code></pre>
-    <p class="note"><code>pip install apify-client</code> (3.x). Your token is in Apify Console &rarr; Settings &rarr; API &amp; Integrations. It also runs from JavaScript, Make, Zapier, n8n and Google Sheets.</p>
-    <h4>Ready-made examples</h4>
-    <ul class="examples">
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-trends-seasonality-checker">Find when each keyword peaks every year</a></li>
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/bulk-google-trends-checker">Get Google Trends for a whole keyword list</a></li>
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/youtube-search-trends">See which topics are rising on YouTube search</a></li>
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/compare-keywords-google-trends">Compare up to 5 keywords on one Google Trends scale</a></li>
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-trends-by-state">See where a keyword is most searched, state by state</a></li>
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/rising-related-searches-finder">Find the fastest-rising related searches for your topics</a></li>
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-shopping-search-trends">Track Google Shopping search trends for products</a></li>
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-news-search-trends">Measure news search interest in companies and topics</a></li>
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-trends-last-7-days">Spot search spikes in the last 7 days</a></li>
-        <li><a href="https://apify.com/meridianlabs/google-trends-scraper/examples/google-image-search-trends">Track Google Image search trends for visual topics</a></li>
-    </ul>
-  </section>
   <hr>
   <section class="tool" id="keyword-search-volume">
     <h3>Keyword Search Volume &amp; CPC API + Google Trends</h3>
@@ -599,17 +538,11 @@ for row in client.dataset(run.default_dataset_id).iterate_items():
     </ul>
   </section>
   <hr>
-  <section id="pytrends">
-    <h3>Looking for a pytrends alternative?</h3>
-    <p><a href="https://github.com/GeneralMills/pytrends">pytrends</a>, the unofficial Python library most people used for Google Trends, was archived in April 2025 and no longer gets fixes, and bulk jobs from one IP run into <code>429 Too Many Requests</code>. The Google Trends Scraper above does the same job as a hosted API with proxies and retries built in. There&rsquo;s a small pytrends-style Python client for it on GitHub: <a href="https://github.com/leewilliam200/google-trends-api-python">google-trends-api-python</a>.</p>
-  </section>
-  <hr>
 
   <section id="ai-agents">
     <h3>Use them from AI agents (MCP)</h3>
     <p>Every tool is available through Apify&rsquo;s hosted MCP server. Add the URL to any MCP client (Claude, ChatGPT, Cursor and others) and sign in with your Apify account; runs are billed per result, as on the Store.</p>
     <ul>
-      <li><strong>Google Trends Scraper &amp; API</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/google-trends-scraper</code><br>MCP Registry: <code>com.meridianlabssoftware/google-trends</code></li>
       <li><strong>Keyword Search Volume &amp; CPC API + Google Trends</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/keyword-search-volume</code><br>MCP Registry: <code>com.meridianlabssoftware/keyword-search-volume</code></li>
       <li><strong>Backlink Checker: Referring Domains &amp; Spam Score</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/backlink-checker</code><br>MCP Registry: <code>com.meridianlabssoftware/backlink-checker</code></li>
       <li><strong>Competitor Keyword Research: Ranked Keywords API</strong><br><code>https://mcp.apify.com/?tools=meridianlabs/competitor-keywords</code><br>MCP Registry: <code>com.meridianlabssoftware/competitor-keywords</code></li>
